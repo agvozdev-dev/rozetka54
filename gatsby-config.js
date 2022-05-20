@@ -1,10 +1,49 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+/*
+
+    gatsby-plugin-image
+    gatsby-plugin-web-font-loader
+    gatsby-plugin-react-helmet
+    gatsby-plugin-global-styles
+    gatsby-plugin-manifest: ^3.2.0 => 3.3.0
+    gatsby-plugin-offline: ^4.2.0 => 4.3.0
+    gatsby-plugin-postcss: ^4.3.0 => 4.3.0
+    gatsby-plugin-react-helmet: ^4.2.0 => 4.3.0
+    gatsby-plugin-sharp: ^3.2.1 => 3.3.1
+    gatsby-source-filesystem: ^3.2.0 => 3.3.0
+    gatsby-transformer-sharp: ^3.2.0 => 3.3.0
+
+*/
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-tsconfig-paths`,
+      options: {
+        configFile: `${__dirname}/tsconfig.json`,
+        silent: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: [
+            'Roboto:400,700',
+            'Montserrat Alternates:400,600',
+            'Philosopher:700',
+          ],
+        },
+      },
+    },
+  ],
 }

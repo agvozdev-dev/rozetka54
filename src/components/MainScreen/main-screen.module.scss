@@ -1,0 +1,9 @@
+.slider {
+  max-height: 100vh;
+  overflow: auto;
+
+  &__img {
+    max-height: 100vh;
+    color: green;
+  }
+}
