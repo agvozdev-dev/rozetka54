@@ -1,0 +1,41 @@
+@import '../../styles/var';
+@import '../../styles/mixins';
+
+.slider {
+  max-height: 100vh;
+  height: 100vh;
+  overflow: auto;
+
+  &__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+
+    &::after {
+      content: url('../../../static/images/main-page/arrow\ left.svg');
+    }
+  }
+
+  &__header {
+    color: $primary-yellow;
+    @include font('Montserrat Alternates', 600);
+    font-size: 58px;
+    margin-bottom: 60px;
+  }
+
+  &__description {
+    @include font('Roboto', 400);
+    font-size: 18px;
+    line-height: 170.2%;
+    max-width: 930px;
+    margin-bottom: 60px;
+  }
+
+  &__img {
+    max-height: 100vh; //????
+    filter: brightness(70%);
+  }
+}

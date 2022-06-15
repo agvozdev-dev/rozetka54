@@ -28,3 +28,15 @@ body {
     max-width: 1600px;
   }
 }
+
+.swiper-button-prev {
+  position: relative !important;
+  display: block !important;
+  width: 37px !important;
+  height: 8px !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
