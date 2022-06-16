@@ -55,8 +55,13 @@
 //   ],
 // }
 
+/**
+ * gatsby-plugin-sass - для поддержки sass / scss
+ * gatsby-source-filesystem - получение данных из файлов в вашей вайловой системе
+ * gatsby-plugin-tsconfig-paths -
+ * */
+
 module.exports = {
-  // pathPrefix: `/rozetka54-demo`,
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
