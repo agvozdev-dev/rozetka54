@@ -36,6 +36,11 @@
     margin-bottom: 60px;
   }
 
+  &__btns_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   &__img {
     max-height: 100vh; //????
     filter: brightness(70%);

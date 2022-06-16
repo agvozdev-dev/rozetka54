@@ -9,17 +9,10 @@ import 'swiper/css/autoplay'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import data from 'content/main-page.yaml'
 import classNames from 'classnames'
+import LearnMoreButton from 'components/LearnMoreButton'
 
 const SliderItem = (props: any) => {
-  var learnMoreBtnClasses = classNames(
-    `${styles.slider__btn}`, 
-    `${styles.slider__learn_more_btn}`
-  )
-
-  var phoneCallBtnClasses = classNames(
-    `${styles.slider__btn}`, 
-    `${styles.slider__phone_call_btn}`
-  )
+  var phoneCallBtnClasses = classNames(`${styles.slider__btn}`, `${styles.slider__phone_call_btn}`)
 
   return (
     <div className={`${styles.slider__content_wrapper}`}>
@@ -32,8 +25,11 @@ const SliderItem = (props: any) => {
       <div className={`${styles.slider__content}`}>
         <h2 className={`${styles.slider__header}`}>{props.header}</h2>
         <p className={`${styles.slider__description}`}>{props.description}</p>
-        <button className={learnMoreBtnClasses}>Узнать больше</button>
-        <button className={phoneCallBtnClasses}>Позвонить</button>
+
+        <div className={`${styles.slider__btns_wrapper}`}>
+          <LearnMoreButton to={'electro'} />
+          <button className={phoneCallBtnClasses}>Позвонить</button>
+        </div>
       </div>
       <svg className="swiper-button-next" viewBox="0 0 37 8" fill="#ffc962" xmlns="http://www.w3.org/2000/svg">
         <path
