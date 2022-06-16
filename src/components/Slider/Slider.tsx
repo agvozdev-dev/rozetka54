@@ -7,7 +7,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 import { Autoplay, Navigation, Pagination } from 'swiper'
-import data from '../../content/main-page.yaml'
+import data from 'content/main-page.yaml'
 
 const SliderItem = (props: any) => {
   return (

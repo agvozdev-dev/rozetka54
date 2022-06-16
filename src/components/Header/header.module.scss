@@ -16,10 +16,6 @@
     padding-bottom: 18px;
   }
 
-  &__phone_list {
-    display: flex;
-  }
-
   &__phone_wrapper {
     display: flex;
     cursor: pointer;
@@ -53,6 +49,7 @@
   &__phone_icon {
     margin-right: 10px;
     transition: fill $delay;
+    vertical-align: bottom;
   }
 
   &__phone_number {
@@ -61,7 +58,7 @@
 
   &__phone_subtitle {
     @include font('Roboto', 400);
-    font-size: 14px;
+    font-size: 16px;
 
     display: block;
     text-align: center;
