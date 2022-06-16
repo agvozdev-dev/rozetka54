@@ -56,11 +56,10 @@
 // }
 
 module.exports = {
-  pathPrefix: `/rozetka54-demo`,
+  // pathPrefix: `/rozetka54-demo`,
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
