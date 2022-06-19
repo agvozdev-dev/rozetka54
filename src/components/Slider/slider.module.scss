@@ -45,32 +45,4 @@
     max-height: 100vh; //????
     filter: brightness(70%);
   }
-
-  &__btn {
-    border-radius: 10px;
-    @include font('Roboto', 700);
-    font-size: 18px;
-    width: 175px;
-    height: 70px;
-    transition: all $delay;
-  }
-
-  &__learn_more_btn {
-    background-color: $primary-yellow;
-    color: $primary-gray;
-    margin-right: 150px;
-
-    &:hover {
-      background-color: $secondary-yellow;
-    }
-  }
-
-  &__phone_call_btn {
-    background-color: $primary-red;
-    color: #fff;
-
-    &:hover {
-      background-color: $secondary-red;
-    }
-  }
 }

@@ -1,3 +1,3 @@
-import LearnMoreButton from './CallButton'
+import CallButton from './CallButton'
 
-export default LearnMoreButton
+export default CallButton

@@ -1,20 +1,12 @@
 @import '../../../styles/var';
 @import '../../../styles/mixins';
 
-.learn_more_btn {
-  display: block;
-  text-align: center;
-  background-color: $primary-yellow;
-  color: $primary-gray;
-  margin-right: 150px;
-  border-radius: 10px;
-  @include font('Roboto', 700);
-  font-size: 18px;
-  transition: all $delay;
-  width: 175px;
-  height: 70px;
-  line-height: 70px;
+.call_btn {
+  @include button();
+  background-color: $primary-red;
+  color: #fff;
+
   &:hover {
-    background-color: $secondary-yellow;
+    background-color: $secondary-red;
   }
 }

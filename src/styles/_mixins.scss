@@ -2,3 +2,15 @@
   font-family: $ff, sans-serif;
   font-weight: $fw;
 }
+
+@mixin button() {
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  @include font('Roboto', 700);
+  font-size: 18px;
+  transition: all $delay;
+  width: 175px;
+  height: 70px;
+  line-height: 70px;
+}

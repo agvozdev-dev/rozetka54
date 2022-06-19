@@ -2,18 +2,11 @@
 @import '../../../styles/mixins';
 
 .learn_more_btn {
-  display: block;
-  text-align: center;
+  @include button();
   background-color: $primary-yellow;
   color: $primary-gray;
   margin-right: 150px;
-  border-radius: 10px;
-  @include font('Roboto', 700);
-  font-size: 18px;
-  transition: all $delay;
-  width: 175px;
-  height: 70px;
-  line-height: 70px;
+
   &:hover {
     background-color: $secondary-yellow;
   }

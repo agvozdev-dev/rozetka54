@@ -1,11 +1,11 @@
 import React from 'react'
-import * as styles from './learn-more-btn.module.scss'
-import { Link } from 'gatsby'
+import * as styles from './call-btn.module.scss'
+import data from 'content/shared.yaml'
 
-export default (props: { to: string }) => {
+export default () => {
   return (
-    <Link className={styles.learn_more_btn} to={props.to}>
-      Узнать больше
-    </Link>
+    <a className={`${styles.call_btn}`} href={`tel:${data.phone}`}>
+      Позвонить
+    </a>
   )
 }

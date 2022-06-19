@@ -8,11 +8,11 @@ import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import data from 'content/main-page.yaml'
-import classNames from 'classnames'
 import LearnMoreButton from 'components/buttons/LearnMoreButton'
+import CallButton from 'components/buttons/CallButton'
 
 const SliderItem = (props: any) => {
-  var phoneCallBtnClasses = classNames(`${styles.slider__btn}`, `${styles.slider__phone_call_btn}`)
+ 
 
   return (
     <div className={`${styles.slider__content_wrapper}`}>
@@ -28,7 +28,7 @@ const SliderItem = (props: any) => {
 
         <div className={`${styles.slider__btns_wrapper}`}>
           <LearnMoreButton to={'electro'} />
-          <button className={phoneCallBtnClasses}>Позвонить</button>
+          <CallButton />
         </div>
       </div>
       <svg className="swiper-button-next" viewBox="0 0 37 8" fill="#ffc962" xmlns="http://www.w3.org/2000/svg">
