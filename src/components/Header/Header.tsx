@@ -18,7 +18,7 @@ export default () => {
       <div className="container">
         <div className={styles.header__wrapper}>
           <Link className="logo" to="#">
-            <StaticImage loading="eager" layout="fixed" placeholder="blurred" className="logo__img" src={'./logo-51x60.png'} alt="Logo" />
+            <StaticImage loading="eager" layout="fixed" placeholder="blurred" className="logo__img" src={'../../../static/images/logo/logo-51x60.png'} alt="Logo" />
           </Link>
 
           <nav className={styles.menu}>
