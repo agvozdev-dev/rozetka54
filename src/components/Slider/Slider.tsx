@@ -9,7 +9,7 @@ import 'swiper/css/autoplay'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import data from 'content/main-page.yaml'
 import classNames from 'classnames'
-import LearnMoreButton from 'components/LearnMoreButton'
+import LearnMoreButton from 'components/buttons/LearnMoreButton'
 
 const SliderItem = (props: any) => {
   var phoneCallBtnClasses = classNames(`${styles.slider__btn}`, `${styles.slider__phone_call_btn}`)
