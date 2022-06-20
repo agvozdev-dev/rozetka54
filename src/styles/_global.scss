@@ -19,16 +19,6 @@ body {
   color: #fff;
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 15px;
-
-  &__large {
-    max-width: 1600px;
-  }
-}
-
 .swiper-button-next {
   background-image: url('./arrow-left.svg');
   background-repeat: no-repeat;

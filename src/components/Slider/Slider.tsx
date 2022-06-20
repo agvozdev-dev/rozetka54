@@ -10,10 +10,11 @@ import { Autoplay, Navigation, Pagination } from 'swiper'
 import data from 'content/main-page.yaml'
 import LearnMoreButton from 'components/buttons/LearnMoreButton'
 import CallButton from 'components/buttons/CallButton'
+import Container from 'components/Container'
 
 const SliderItem = (props: any) => (
   <div className={`${styles.slider__outer_wrapper}`}>
-    <div className="container">
+    <Container>
       <div className={`${styles.slider__content_wrapper}`}>
         {/* <svg className="swiper-button-prev" viewBox="0 0 37 8" fill="#ffc962" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -36,7 +37,7 @@ const SliderItem = (props: any) => (
           />
         </svg> */}
       </div>
-    </div>
+    </Container>
   </div>
 )
 

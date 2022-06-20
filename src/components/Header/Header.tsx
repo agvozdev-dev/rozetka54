@@ -3,6 +3,7 @@ import * as styles from './header.module.scss'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import data from 'content/shared.yaml'
+import Container from 'components/Container'
 
 const MenuItem = (props: { pageName: string; to: string }) => (
   <li className={styles.menu__item}>
@@ -15,7 +16,7 @@ const MenuItem = (props: { pageName: string; to: string }) => (
 export default () => {
   return (
     <header className={styles.header}>
-      <div className="container">
+      <Container>
         <div className={styles.header__wrapper}>
           <Link className="logo" to="#">
             <StaticImage loading="eager" layout="fixed" placeholder="blurred" className="logo__img" src={'../../../static/images/logo/logo-51x60.png'} alt="Logo" />
@@ -44,7 +45,7 @@ export default () => {
             </a>
           </div>
         </div>
-      </div>
+      </Container>
     </header>
   )
 }
