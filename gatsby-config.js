@@ -62,6 +62,13 @@
  * */
 
 module.exports = {
+  siteMetadata: {
+    title: "Rozetka 54",
+    description:
+      "Электромонтаж под ключ, установка видеонаблюдения, подключение интернета. Фиксированная цена. Сюблюдение сроков. Порядок на объекте",
+    url: "https://www.rozetka54.ru",
+    image: "/static/images/logo/logo.png", 
+  },
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,

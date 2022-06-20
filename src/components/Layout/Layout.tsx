@@ -6,10 +6,10 @@ type LayoutProps = {
 };
 
 const Layout : React.FC<LayoutProps> = ({ children }) => (
-  <div>
+  <>
     <Header />
     <div>{children}</div>
-  </div>
+  </>
 )
 
 export default Layout
