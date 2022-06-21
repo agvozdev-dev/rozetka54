@@ -17,12 +17,22 @@ export default () => {
   return (
     <header className={styles.header}>
       <Container>
-        <div className={styles.header__wrapper}>
+        <div className={styles.header__wrapper} id="header-wrapper">
           <Link className="logo" to="#">
             <StaticImage loading="eager" layout="fixed" placeholder="blurred" className="logo__img" src={'../../../static/images/logo/logo-51x60.png'} alt="Logo" />
           </Link>
 
           <nav className={styles.menu}>
+            <button
+              className={styles.menu__btn}
+              type="button"
+              onClick={() => {
+                const el = document.getElementById('header-wrapper')
+                el.classList.add('header__wrapper_active')
+              }}
+            >
+              <span className={styles.menu__btn_item}></span>
+            </button>
             <ul className={styles.menu__list}>
               <MenuItem pageName="Главная" to="#" />
               <MenuItem pageName="О нас" to="#" />

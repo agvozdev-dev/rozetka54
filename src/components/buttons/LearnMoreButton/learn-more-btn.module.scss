@@ -10,4 +10,16 @@
   &:hover {
     background-color: $secondary-yellow;
   }
+
+  @media (max-width: 1200px) {
+    margin-right: 75px;
+  }
+
+  @media (max-width: 992px) {
+    margin-right: 50px;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 10px;
+  }
 }
