@@ -13,6 +13,11 @@ const MenuItem = (props: { pageName: string; to: string }) => (
   </li>
 )
 
+const headerBtnClick = () => {
+  const el = document.getElementById('header-wrapper')
+  el.classList.toggle('header__wrapper_active')
+}
+
 export default () => {
   return (
     <header className={styles.header}>
@@ -23,14 +28,7 @@ export default () => {
           </Link>
 
           <nav className={styles.menu}>
-            <button
-              className={styles.menu__btn}
-              type="button"
-              onClick={() => {
-                const el = document.getElementById('header-wrapper')
-                el.classList.add('header__wrapper_active')
-              }}
-            >
+            <button className={styles.menu__btn} type="button" onClick={headerBtnClick}>
               <span className={styles.menu__btn_item}></span>
             </button>
             <ul className={styles.menu__list}>
