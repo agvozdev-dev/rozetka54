@@ -1,0 +1,45 @@
+@import '../../../styles/var';
+@import '../../../styles/mixins';
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: content;
+}
+
+.section-subtitle {
+  @include font('Roboto', 400);
+  font-size: 18px;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: '';
+    background-image: url('../../../../static/images/icons/hammer-icon.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -8px;
+    left: -50px;
+  }
+}
+
+.section-title {
+  @include font('Roboto', 700);
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $underline_gray;
+
+  &::before {
+    content: '';
+    width: 70px;
+    position: absolute;
+    bottom: 30px;
+    border-bottom: 4px solid $primary-yellow;
+  }
+}
