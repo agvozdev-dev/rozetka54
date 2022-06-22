@@ -15,7 +15,7 @@ const MenuItem = (props: { pageName: string; to: string }) => (
 
 const headerBtnClick = () => {
   const el = document.getElementById('header-wrapper')
-  el.classList.toggle('header__wrapper_active')
+  el.classList.toggle(`${styles.header__wrapper_active}`)
 }
 
 export default () => {

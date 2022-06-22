@@ -4,106 +4,6 @@
 $padding-top-bottom-large: 18px;
 $padding-top-bottom-small: 7px;
 
-.header {
-  padding-top: $padding-top-bottom-large;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 100;
-
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid $underline_gray;
-    padding-bottom: $padding-top-bottom-large;
-
-    @media (max-width: 992px) {
-      padding-bottom: $padding-top-bottom-small;
-    }
-  }
-
-  &__wrapper_active {
-    bottom: 0;
-  }
-
-  &__phone_wrapper {
-    display: flex;
-    cursor: pointer;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
-    &:hover {
-      color: $secondary-yellow;
-    }
-
-    @media (max-width: 992px) {
-      display: none;
-    }
-  }
-
-  &__phone_link {
-    @include font('Roboto', 700);
-    font-size: 18px;
-    display: block;
-    color: $primary-yellow;
-
-    transition: color $delay;
-
-    &:hover {
-      color: $secondary-yellow;
-    }
-
-    &:hover svg {
-      fill: $secondary-yellow;
-    }
-
-    @media (max-width: 1400px) {
-      font-size: 16px;
-    }
-  }
-
-  &__phone_icon {
-    margin-right: 10px;
-    transition: fill $delay;
-    vertical-align: bottom;
-  }
-
-  &__phone_number {
-    margin-bottom: 10px;
-  }
-
-  &__phone_subtitle {
-    @include font('Roboto', 400);
-    font-size: 15px;
-
-    display: block;
-    text-align: center;
-
-    color: #fff;
-
-    @media (max-width: 1400px) {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 992px) {
-    padding-top: $padding-top-bottom-small;
-  }
-}
-
-.logo {
-  outline-color: $primary-yellow;
-
-  &__img {
-    width: 51px;
-    height: 60px;
-    object-fit: contain;
-  }
-}
-
 .menu {
   outline-color: $primary-yellow;
 
@@ -181,13 +81,128 @@ $padding-top-bottom-small: 7px;
   &__btn span::after {
     content: '';
     transform-origin: 0% 0%;
+    transition: transform $delay;
   }
 
   &__btn span::before {
-    top: -10px;
+    top: -9px;
   }
   &__btn span::after {
-    top: 10px;
+    top: 9px;
     transform-origin: 0% 100%;
+  }
+}
+
+.header {
+  padding-top: $padding-top-bottom-large;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $underline_gray;
+    padding-bottom: $padding-top-bottom-large;
+
+    &_active {
+      bottom: 0;
+    }
+
+    &_active span {
+      width: 0;
+    }
+
+    &_active span::before {
+      width: 30px;
+      transform: rotate(45deg) translate(2px, -6px);
+    }
+
+    &_active span::after {
+      width: 30px;
+      transform: rotate(-45deg) translate(4px, 3px);
+    }
+
+    @media (max-width: 992px) {
+      padding-bottom: $padding-top-bottom-small;
+    }
+  }
+
+  &__phone_wrapper {
+    display: flex;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      color: $secondary-yellow;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__phone_link {
+    @include font('Roboto', 700);
+    font-size: 18px;
+    display: block;
+    color: $primary-yellow;
+
+    transition: color $delay;
+
+    &:hover {
+      color: $secondary-yellow;
+    }
+
+    &:hover svg {
+      fill: $secondary-yellow;
+    }
+
+    @media (max-width: 1400px) {
+      font-size: 16px;
+    }
+  }
+
+  &__phone_icon {
+    margin-right: 10px;
+    transition: fill $delay;
+    vertical-align: bottom;
+  }
+
+  &__phone_number {
+    margin-bottom: 10px;
+  }
+
+  &__phone_subtitle {
+    @include font('Roboto', 400);
+    font-size: 15px;
+
+    display: block;
+    text-align: center;
+
+    color: #fff;
+
+    @media (max-width: 1400px) {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding-top: $padding-top-bottom-small;
+  }
+}
+
+.logo {
+  outline-color: $primary-yellow;
+
+  &__img {
+    width: 51px;
+    height: 60px;
+    object-fit: contain;
   }
 }
