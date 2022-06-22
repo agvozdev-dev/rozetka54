@@ -1,7 +1,7 @@
-@import '../../../styles/var';
-@import '../../../styles/mixins';
+@import '../../../../styles/var';
+@import '../../../../styles/mixins';
 
-.learn_more_btn {
+.learn-more-btn {
   @include button();
   background-color: $primary-yellow;
   color: $primary-gray;

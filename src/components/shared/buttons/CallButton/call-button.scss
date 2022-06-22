@@ -1,7 +1,7 @@
-@import '../../../styles/var';
-@import '../../../styles/mixins';
+@import '../../../../styles/var';
+@import '../../../../styles/mixins';
 
-.call_btn {
+.call-btn {
   @include button();
   background-color: $primary-red;
   color: #fff;

@@ -1,5 +1,5 @@
-import Layout from 'components/Layout'
-import MainScreen from 'components/Slider'
+import Layout from 'components/shared/Layout'
+import MainScreen from 'components/main-page/Slider'
 import React from 'react'
 
 export default () => (

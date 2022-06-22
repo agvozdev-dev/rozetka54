@@ -1,12 +1,12 @@
-@import '../../styles/var';
-@import '../../styles/mixins';
+@import '../../../styles/var';
+@import '../../../styles/mixins';
 
 .slider {
   max-height: 100vh;
   height: 100vh;
   overflow: auto;
 
-  &__outer_wrapper {
+  &__outer-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,7 +15,7 @@
     width: 100%;
   }
 
-  &__content_wrapper {
+  &__content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,7 @@
     }
   }
 
-  &__btns_wrapper {
+  &__btns-wrapper {
     display: flex;
     justify-content: center;
   }
@@ -70,9 +70,5 @@
   &__img {
     max-height: 100vh; //????
     filter: brightness(70%);
-  }
-
-  &__item {
-    /* for bem*/
   }
 }

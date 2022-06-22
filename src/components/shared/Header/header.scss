@@ -1,5 +1,5 @@
-@import '../../styles/var';
-@import '../../styles/mixins';
+@import '../../../styles/var';
+@import '../../../styles/mixins';
 
 $padding-top-bottom-large: 18px;
 $padding-top-bottom-small: 7px;
@@ -10,7 +10,6 @@ $padding-top-bottom-small: 7px;
   &__list {
     @include font('Roboto', 400);
     font-size: 18px;
-
     display: flex;
 
     @media (max-width: 1400px) {
@@ -18,13 +17,17 @@ $padding-top-bottom-small: 7px;
     }
 
     @media (max-width: 768px) {
-      display: none;
+      transform: translateY(-1000px);
     }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -57,7 +60,6 @@ $padding-top-bottom-small: 7px;
     cursor: pointer;
     z-index: 3;
     right: 15px;
-
     top: 50%;
     transform: translateY(-50%);
 
@@ -107,20 +109,39 @@ $padding-top-bottom-small: 7px;
     border-bottom: 1px solid $underline_gray;
     padding-bottom: $padding-top-bottom-large;
 
-    &_active {
-      bottom: 0;
+    &--active {
+      .menu__list {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $primary-gray;
+        z-index: 2;
+        text-align: center;
+        padding-top: 80px;
+        transform: translateY(0);
+        transition: transform 0.5s;
+        height: 100vh;
+      }
+
+      .menu__item {
+        font-size: 36px;
+        margin-bottom: 30px;
+      }
     }
 
-    &_active span {
+    &--active span {
       width: 0;
     }
 
-    &_active span::before {
+    &--active span::before {
       width: 30px;
       transform: rotate(45deg) translate(2px, -6px);
     }
 
-    &_active span::after {
+    &--active span::after {
       width: 30px;
       transform: rotate(-45deg) translate(4px, 3px);
     }
@@ -130,7 +151,7 @@ $padding-top-bottom-small: 7px;
     }
   }
 
-  &__phone_wrapper {
+  &__phone-wrapper {
     display: flex;
     cursor: pointer;
 
@@ -147,12 +168,11 @@ $padding-top-bottom-small: 7px;
     }
   }
 
-  &__phone_link {
+  &__phone-link {
     @include font('Roboto', 700);
     font-size: 18px;
     display: block;
     color: $primary-yellow;
-
     transition: color $delay;
 
     &:hover {
@@ -168,23 +188,21 @@ $padding-top-bottom-small: 7px;
     }
   }
 
-  &__phone_icon {
+  &__phone-icon {
     margin-right: 10px;
     transition: fill $delay;
     vertical-align: bottom;
   }
 
-  &__phone_number {
+  &__phone-number {
     margin-bottom: 10px;
   }
 
-  &__phone_subtitle {
+  &__phone-subtitle {
     @include font('Roboto', 400);
     font-size: 15px;
-
     display: block;
     text-align: center;
-
     color: #fff;
 
     @media (max-width: 1400px) {
@@ -199,6 +217,7 @@ $padding-top-bottom-small: 7px;
 
 .logo {
   outline-color: $primary-yellow;
+  z-index: 3;
 
   &__img {
     width: 51px;

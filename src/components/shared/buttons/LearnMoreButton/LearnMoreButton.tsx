@@ -1,10 +1,10 @@
 import React from 'react'
-import * as styles from './learn-more-btn.module.scss'
+import './learn-more-button.scss'
 import { Link } from 'gatsby'
 
 export default (props: { to: string }) => {
   return (
-    <Link className={styles.learn_more_btn} to={props.to}>
+    <Link className="learn-more-btn" to={props.to}>
       Узнать больше
     </Link>
   )
