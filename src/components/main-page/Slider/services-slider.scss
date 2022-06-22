@@ -95,15 +95,15 @@
     // --- portrait ---
 
     @include max-width-portrait($xl) {
-      font-size: 48px;
+      font-size: 24px;
     }
 
     @include max-width-portrait($lg) {
-      font-size: 42px;
+      font-size: 24px;
     }
 
     @include max-width-portrait($md) {
-      font-size: 36px;
+      font-size: 14px;
     }
 
     @include max-width-portrait($xs) {
