@@ -64,7 +64,7 @@ export default () => {
           loading="eager"
           placeholder="blurred"
           objectFit="cover"
-          src={'../../../static/images/main-page/electro.jpg'}
+          src={'../../../../static/images/main-page/electro.jpg'}
           alt="slider image"
         />
       </SwiperSlide>
@@ -77,7 +77,7 @@ export default () => {
           loading="eager"
           placeholder="blurred"
           objectFit="cover"
-          src={'../../../static/images/main-page/video.jpg'}
+          src={'../../../../static/images/main-page/video.jpg'}
           alt="slider image"
         />
       </SwiperSlide>
@@ -90,7 +90,7 @@ export default () => {
           loading="eager"
           placeholder="blurred"
           objectFit="cover"
-          src={'../../../static/images/main-page/internet.jpg'}
+          src={'../../../../static/images/main-page/internet.jpg'}
           alt="slider image"
         />
       </SwiperSlide>

@@ -66,12 +66,21 @@ body {
   background-color: transparent !important;
   position: relative !important;
   margin: 0 auto;
+
+  @include max-height-landscape($sm) {
+    width: 10px !important;
+    height: 10px !important;
+    border: 2px solid #fff;
+  }
 }
 
 .swiper-pagination {
   margin-bottom: 115px;
 
   @media (max-width: 992px) {
-    margin-bottom: 70px;
+  }
+
+  @include max-height-landscape($sm) {
+    margin-bottom: 10px;
   }
 }

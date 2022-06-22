@@ -31,21 +31,56 @@
     font-size: 58px;
     margin-bottom: 60px;
 
-    @media (max-width: 1200px) {
+    // --- portrait ---
+
+    @include max-width-portrait($xl) {
       font-size: 48px;
     }
 
-    @media (max-width: 992px) {
+    @include max-width-portrait($lg) {
       font-size: 42px;
-      margin-bottom: 50px;
     }
 
-    @media (max-width: 768px) {
+    @include max-width-portrait($md) {
       font-size: 36px;
     }
 
-    @media (max-width: 576px) {
+    @include max-width-portrait($sm) {
       font-size: 28px;
+    }
+
+    @include max-width-portrait($xs) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    // --- landscape ---
+
+    @include max-width-landscape($xl) {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    @include max-width-landscape($lg) {
+      font-size: 28px;
+    }
+
+    @include max-width-landscape($md) {
+      font-size: 26px;
+    }
+
+    @include max-width-landscape($sm) {
+      font-size: 24px;
+    }
+
+    @include max-height-landscape($sm) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    @include max-height-landscape($xs) {
+      font-size: 18px;
+      margin-bottom: 10px;
     }
   }
 
@@ -57,8 +92,35 @@
     margin: 0 auto;
     margin-bottom: 60px;
 
-    @media (max-width: 992px) {
-      margin-bottom: 50px;
+    // --- portrait ---
+
+    @include max-width-portrait($xl) {
+      font-size: 48px;
+    }
+
+    @include max-width-portrait($lg) {
+      font-size: 42px;
+    }
+
+    @include max-width-portrait($md) {
+      font-size: 36px;
+    }
+
+    @include max-width-portrait($xs) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    // --- landscape ---
+
+    @include max-height-landscape($sm) {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    @include max-height-landscape($xs) {
+      font-size: 12px;
+      margin-bottom: 10px;
     }
   }
 
@@ -68,7 +130,7 @@
   }
 
   &__img {
-    max-height: 100vh; //????
+    max-height: 100vh;
     filter: brightness(70%);
   }
 }
