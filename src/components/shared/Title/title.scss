@@ -16,7 +16,7 @@
 
   &::before {
     content: '';
-    background-image: url('../../../../static/images/icons/hammer-icon.png');
+    background-image: url('../../../../static/images/icons/hammer.png');
     background-size: cover;
     width: 30px;
     height: 30px;
@@ -34,12 +34,13 @@
   display: inline-block;
   padding-bottom: 10px;
   border-bottom: 1px solid $underline_gray;
+  position: relative;
 
   &::before {
     content: '';
     width: 70px;
     position: absolute;
-    bottom: 30px;
     border-bottom: 4px solid $primary-yellow;
+    bottom: 0;
   }
 }

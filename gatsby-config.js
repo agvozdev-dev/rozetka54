@@ -63,11 +63,11 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Rozetka 54",
+    title: 'Rozetka 54',
     description:
-      "Электромонтаж под ключ, установка видеонаблюдения, подключение интернета. Фиксированная цена. Сюблюдение сроков. Порядок на объекте",
-    url: "https://www.rozetka54.ru",
-    image: "/static/images/logo/logo.png", 
+      'Электромонтаж под ключ, установка видеонаблюдения, подключение интернета. Фиксированная цена. Сюблюдение сроков. Порядок на объекте',
+    url: 'https://www.rozetka54.ru',
+    image: '/static/images/logo/logo.png',
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -91,7 +91,12 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Roboto:400,700', 'Montserrat Alternates:400,600', 'Philosopher:700'],
+          families: [
+            'Roboto:400,700',
+            'Montserrat Alternates:400,600',
+            'Philosopher:700',
+            'Abril Fatface:400',
+          ],
         },
       },
     },
