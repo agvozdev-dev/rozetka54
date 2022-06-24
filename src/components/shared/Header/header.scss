@@ -14,6 +14,7 @@ $padding-top-bottom-small: 7px;
 
     @media (max-width: 768px) {
       transform: translateY(-1000px);
+      display: none;
     }
   }
 
@@ -106,6 +107,7 @@ $padding-top-bottom-small: 7px;
 
     &--active {
       .menu__list {
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 0;

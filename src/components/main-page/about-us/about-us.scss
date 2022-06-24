@@ -13,16 +13,21 @@
     margin-bottom: 30px;
   }
 
-  &__point-list {
+  &__text-point-list {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-around;
     margin-bottom: 30px;
     text-align: start;
+
+    @include max-width($lg) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  &__point-item {
+  &__text-point-item {
     width: 465px;
     margin-bottom: 30px;
     position: relative;
@@ -31,13 +36,25 @@
     &:nth-child(odd) {
       margin-right: 30px;
     }
+
+    @include max-width($lg) {
+      margin-right: 0 !important;
+    }
+
+    @include max-width($sm) {
+      width: 100% !important;
+    }
   }
 
   &__card-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include max-width($xl) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__card-item {
@@ -97,6 +114,12 @@
         background-image: url('../../../../static/images/icons/electric-plug.png');
       }
     }
+
+    @include max-width($xl) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__card-title {
@@ -106,6 +129,10 @@
     margin: 0 auto;
     margin-bottom: 15px;
     line-height: 1.7;
+
+    @include max-width($sm) {
+      font-size: 16px;
+    }
   }
 
   &__card-description {

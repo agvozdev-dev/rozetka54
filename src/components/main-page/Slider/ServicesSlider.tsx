@@ -57,7 +57,10 @@ export default () => {
       modules={[Autoplay, Pagination, Navigation]}
     >
       <SwiperSlide className="slider__item">
-        <SliderItem header={electro.header} description={electro.description}></SliderItem>
+        <SliderItem
+          header={electro.header}
+          description={electro.description}
+        ></SliderItem>
         <StaticImage
           className="slider__img"
           layout="fullWidth"
@@ -83,7 +86,10 @@ export default () => {
       </SwiperSlide>
 
       <SwiperSlide className="slider__item">
-        <SliderItem header={internet.header} description={internet.description} />
+        <SliderItem
+          header={internet.header}
+          description={internet.description}
+        />
         <StaticImage
           className="slider__img"
           layout="fullWidth"

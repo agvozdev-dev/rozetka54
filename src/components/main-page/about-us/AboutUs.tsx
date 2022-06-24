@@ -1,5 +1,5 @@
 import CallbackButton from 'components/shared/buttons/CallbackButton'
-import CheckMark from 'components/shared/CheckMark'
+import TextPoint from 'components/shared/TextPoint'
 import Container from 'components/shared/Container'
 import HighlighterText from 'components/shared/HighlighterText'
 import Title from 'components/shared/Title'
@@ -79,10 +79,10 @@ export default () => {
           className="about-us__heading"
         />
 
-        <ul className="about-us__point-list">
+        <ul className="about-us__text-point-list">
           {points.map((point, index) => (
-            <li className="about-us__point-item" key={index}>
-              <CheckMark text={point.text} searchWords={point.searchWords} />
+            <li className="about-us__text-point-item" key={index}>
+              <TextPoint text={point.text} searchWords={point.searchWords} />
             </li>
           ))}
         </ul>

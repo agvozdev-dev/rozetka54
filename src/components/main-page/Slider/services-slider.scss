@@ -127,6 +127,10 @@
   &__btns-wrapper {
     display: flex;
     justify-content: center;
+
+    @include max-width(319.98px) {
+      display: none;
+    }
   }
 
   &__img {

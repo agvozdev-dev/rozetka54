@@ -52,6 +52,18 @@
   }
 }
 
+@mixin max-width($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-width($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
 @mixin max-width-portrait($width) {
   @media only screen and (max-width: $width) and (orientation: portrait) {
     @content;
