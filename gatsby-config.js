@@ -62,6 +62,7 @@
  * */
 
 module.exports = {
+  //pathPrefix: 'rozetka54-demo',
   siteMetadata: {
     title: 'Rozetka 54',
     description:
@@ -93,12 +94,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: [
-            'Roboto:400,700',
-            'Montserrat Alternates:400,600',
-            'Philosopher:700',
-            'Abril Fatface:400',
-          ],
+          families: ['Roboto:400,700', 'Philosopher:700', 'Abril Fatface:400'],
         },
       },
     },

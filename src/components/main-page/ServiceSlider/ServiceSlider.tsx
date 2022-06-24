@@ -75,15 +75,15 @@ export default () => {
     <Swiper
       className="service-slider"
       autoplay={autoplay}
-      loop={true}
       navigation={navigation}
       pagination={true}
+      slidesPerView="auto"
       modules={modules}
     >
       {images.map((image: any, index: number) => {
         const data = getSliderItemData(index)
         return (
-          <SwiperSlide className="service-slider__item">
+          <SwiperSlide className="service-slider__item" key={index}>
             <SliderItem
               header={data.header}
               description={data.description}
