@@ -1,17 +1,10 @@
+import CallbackButton from 'components/shared/buttons/CallbackButton'
 import CheckMark from 'components/shared/CheckMark'
 import Container from 'components/shared/Container'
 import HighlighterText from 'components/shared/HighlighterText'
 import Title from 'components/shared/Title'
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import './about-us.scss'
-
-type BenefitCardPrors = {
-  src: string
-  count: string
-  title: string
-  description: string
-}
 
 type Point = {
   text: string
@@ -106,6 +99,8 @@ export default () => {
             </li>
           ))}
         </ul>
+
+        <CallbackButton href={'#'} extraClassName="about-us__callback-btn" />
       </Container>
     </section>
   )

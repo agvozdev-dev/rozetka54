@@ -18,7 +18,7 @@
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-around;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-align: start;
   }
 
@@ -37,6 +37,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 30px;
   }
 
   &__card-item {
@@ -112,26 +113,10 @@
     line-height: 1.7;
     color: $primary-blue;
   }
-}
 
-.benefit-card {
-  max-width: 340px;
-  border: 2px solid $primary-yellow;
-  border-radius: 20px;
-  padding: 30px 15px 60px;
-
-  &__img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-  }
-
-  &__title {
-  }
-
-  &__description {
-    @include font('Roboto', 400);
-    line-height: 1.7;
-    color: $primary-blue;
+  &__callback-btn {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
   }
 }
