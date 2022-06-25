@@ -16,7 +16,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 export const query = graphql`
   {
     allFile(
-      filter: { relativeDirectory: { eq: "images/main-page" } }
+      filter: { relativeDirectory: { eq: "images/main-page/main-slider" } }
       sort: { fields: name }
     ) {
       edges {
