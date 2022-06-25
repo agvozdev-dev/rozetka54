@@ -69,18 +69,18 @@ const AccordionItem = ({
           </div>
           <div className='price'>
             <div className="price__head">
-              <div className="price__column price__head-column">
+              <div className="price__column price__head-cell">
                  Услуга
               </div>
-              <div className="price__column price__head-column">
+              <div className="price__column price__head-cell">
                 Цена
                 </div>
             </div>
             <div className="price__body">
             {prices.map((price, index) => (
                   <div className="price__row">
-                    <div className="price__column">{price.name}</div>
-                    <div className="price__column">{price.price}</div>
+                    <div className="price__column price__body-cell">{price.name}</div>
+                    <div className="price__column price__body-cell">{price.price}</div>
                   </div>
               ))}
             </div>
