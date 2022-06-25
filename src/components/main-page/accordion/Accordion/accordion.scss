@@ -1,0 +1,44 @@
+@import '../../../../styles/var';
+@import '../../../../styles/mixins';
+
+.accordion {
+  &__item {
+    border-top: 1px solid #9f9f9f;
+  }
+
+  &__item-btn {
+    font-size: 16px;
+    background-color: #008593;
+    color: #fff;
+    text-align: left;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8px;
+    cursor: pointer;
+    border: none;
+  }
+
+  &__item-content {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.2s;
+  }
+}
+
+.control {
+  font-size: 20px;
+}
+
+.answer {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+/* activate toggle */
+.accordion__item.accordion__item--active .accordion__item-btn {
+  background-color: #105057;
+}

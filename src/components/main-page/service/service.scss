@@ -1,0 +1,22 @@
+@import '../../../styles/var';
+@import '../../../styles/mixins';
+
+//todo вынести общие дубли заголовков
+
+.service {
+  text-align: center;
+  padding-top: 60px;
+  position: relative;
+  @include font('Roboto', 400);
+  font-size: 16px;
+
+  &__wrapper {
+    background-color: $secondary-gray;
+    border-radius: 20px;
+    padding: 50px 160px;
+  }
+
+  &__accordion {
+    margin-bottom: 30px;
+  }
+}
