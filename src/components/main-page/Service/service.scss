@@ -1,15 +1,7 @@
 @import '../../../styles/var';
 @import '../../../styles/mixins';
 
-//todo вынести общие дубли заголовков
-
 .service {
-
-
-  &__item-wrapper {
-    padding: 0 20px;
-  }
-
   &__accordion {
     margin-bottom: 30px;
   }
