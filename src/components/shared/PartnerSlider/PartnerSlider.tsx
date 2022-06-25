@@ -28,7 +28,7 @@ export const query = graphql`
 `
 
 const autoplay = {
-  delay: 30000000,
+  delay: 3000,
   disableOnInteraction: false,
 }
 

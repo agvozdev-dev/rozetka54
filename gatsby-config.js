@@ -81,7 +81,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/static`,
-        //path: `${__dirname}/static/images`,
       },
     },
     {

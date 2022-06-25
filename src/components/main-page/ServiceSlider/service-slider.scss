@@ -1,6 +1,11 @@
 @import '../../../styles/var';
 @import '../../../styles/mixins';
 
+.service-slider .gatsby-image-wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
 .service-slider {
   max-height: 100vh;
   height: 100vh;
