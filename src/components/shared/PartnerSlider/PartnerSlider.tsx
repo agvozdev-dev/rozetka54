@@ -63,6 +63,7 @@ export default () => {
                   return (
                     <SwiperSlide className="partner-slider__item" key={index}>
                       <GatsbyImage
+                        loading="eager"
                         image={image}
                         className="partner-slider__img"
                         alt="partner slider image"
