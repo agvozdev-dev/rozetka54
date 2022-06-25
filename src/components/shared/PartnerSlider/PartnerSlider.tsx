@@ -28,7 +28,7 @@ export const query = graphql`
 `
 
 const autoplay = {
-  delay: 400000,
+  delay: 30000000,
   disableOnInteraction: false,
 }
 
@@ -46,9 +46,9 @@ export default () => {
 
   return (
     <section className="partner">
-      <div className="partner__slider-wrapper">
+      <div className="partner__slider-outer-wrapper">
         <Container extraClass="container--large">
-          <div className="partner__slider">
+          <div className="partner__inner-wrapper">
             <div className="swiper-button-prev partner-slider__button-prev"></div>
             <Container>
               <Swiper
