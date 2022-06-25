@@ -29,8 +29,10 @@
       color: $primary-yellow;
     }
 
-    &:nth-child(even) {
-      padding-top: 0;
+    @include max-width($md) {
+      &:nth-child(even) {
+        padding-top: 0;
+      }
     }
   }
 
@@ -47,8 +49,6 @@
       &:nth-child(odd) {
         border-bottom: none;
       }
-
-
     }
   }
 }
