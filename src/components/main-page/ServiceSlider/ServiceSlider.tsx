@@ -1,6 +1,6 @@
 import React from 'react'
 import './service-slider.scss'
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -34,7 +34,7 @@ const SliderItem = (props: any) => (
   <div className="service-slider__outer-wrapper">
     <Container>
       <div className="service-slider__content-wrapper">
-        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-prev service-slider__button-prev"></div>
         <div className="service-slider__content">
           <h2 className="service-slider__header">{props.header}</h2>
           <p className="service-slider__description">{props.description}</p>
@@ -43,7 +43,7 @@ const SliderItem = (props: any) => (
             <CallButton />
           </div>
         </div>
-        <div className="swiper-button-next"></div>
+        <div className="swiper-button-next service-slider__button-next"></div>
       </div>
     </Container>
   </div>
@@ -64,7 +64,7 @@ const navigation = {
   prevEl: '.swiper-button-prev',
 }
 
-const modules = [Autoplay, Pagination, Navigation]
+const modules = [Autoplay, Navigation, Pagination]
 
 export default () => {
   const images = useStaticQuery(query).allFile.edges.map((edge: any) =>

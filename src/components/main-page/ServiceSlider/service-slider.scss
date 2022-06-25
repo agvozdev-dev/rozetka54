@@ -23,6 +23,19 @@
 
   &__content {
     text-align: center;
+    margin: 0 auto;
+  }
+
+  &__button-prev,
+  &__button-next {
+    background-image: url('../../../../static/images/icons/arrow-left.svg');
+    width: 10px !important;
+    padding: 20px !important;
+  }
+
+  &__button-next {
+    transform: rotate(180deg);
+    right: auto !important;
   }
 
   &__header {
