@@ -9,7 +9,7 @@ type TitleProps = {
 }
 
 const Title: React.FC<TitleProps> = ({ title, subtitle, titleSearchWords }) => (
-  <>
+  <div className="title">
     <div>
       <span className="section-subtitle">{subtitle}</span>
     </div>
@@ -18,7 +18,7 @@ const Title: React.FC<TitleProps> = ({ title, subtitle, titleSearchWords }) => (
         <HighlighterText text={title} searchWords={titleSearchWords} />
       </h2>
     </div>
-  </>
+  </div>
 )
 
 export default Title
