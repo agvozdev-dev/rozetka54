@@ -57,8 +57,6 @@
 
 /**
  * gatsby-plugin-sass - для поддержки sass / scss
- * gatsby-source-filesystem - получение данных из файлов в вашей вайловой системе
- * gatsby-plugin-tsconfig-paths -
  * */
 
 module.exports = {
