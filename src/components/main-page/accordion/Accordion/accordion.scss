@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-around;
     color: $primary-gray;
-    
+
     text-align: center;
   }
 
@@ -69,7 +69,6 @@
     text-align: left;
     font-weight: 700;
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -82,9 +81,8 @@
     max-width: 60px;
     max-height: 46px;
 
-    @include max-width($sm) {
-      max-width: 40px;
-      max-height: 26px;
+    @include max-width(400px) {
+      display: none;
     }
   }
 
@@ -92,9 +90,14 @@
     background-color: $secondary-gray;
     border-radius: 20px;
     padding: 20px;
+    transition: all $delay;
 
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+
+    &:hover {
+      background-color: $hover-gray;
     }
   }
 

@@ -41,7 +41,7 @@ const AccordionItem = ({
   const contentEl: any = useRef()
 
   const contentCSS = active
-    ? { height: contentEl.current.scrollHeight }
+    ? { height: contentEl?.current?.scrollHeight }
     : { height: '0px' }
 
   return (
@@ -85,22 +85,6 @@ const AccordionItem = ({
               ))}
             </div>
           </div>
-          {/* <table className="service__price">
-            <thead className="service__thead">
-              <tr className="service__price-row">
-                <th className="service__price-cell">Услуга</th>
-                <th className="service__price-cell">Цена, руб</th>
-              </tr>
-            </thead>
-            <tbody>
-              {prices.map((price, index) => (
-                <tr className="service__price-row" key={index}>
-                  <th className="service__price-cell">{price.name}</th>
-                  <th className="service__price-cell">{price.name}</th>
-                </tr>
-              ))}
-            </tbody>
-          </table> */}
           <Link className="service__learn-more-btn" to={serviceName}>
             Узнать больше
           </Link>
