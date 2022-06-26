@@ -41,7 +41,7 @@ export default () => {
               <span className="menu__btn-item"></span>
             </button>
             <ul className="menu__list" id="menu-list">
-              <MenuItem pageName="Главная" to="electro" />
+              <MenuItem pageName="Главная" to="/" />
               <MenuItem pageName="О нас" to="#" />
               <MenuItem pageName="Услуги и цены" to="#" />
               <MenuItem pageName="Блог" to="/blog" />

@@ -40,10 +40,8 @@ export const query = graphql`
         title
         date(formatString: "DD.MM.YYYY")
         introduction
-        hero_image_alt
-        hero_image_credit_link
-        hero_image_credit_text
-        hero_image {
+        image_alt
+        image {
           childImageSharp {
             gatsbyImageData
           }

@@ -1,0 +1,32 @@
+@import '../../../styles/var';
+@import '../../../styles/mixins';
+
+.post {
+  padding-top: 30px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    border-radius: 20px;
+    max-width: 1000px;
+    width: 100%;
+    background-color: rgba(62, 62, 62, 0.25);
+  }
+
+  &__image {
+    width: 50%;
+    margin-right: 30px;
+    max-width: 400px;
+    border-radius: 20px;
+  }
+
+  &__description {
+    width: 50%;
+  }
+}
