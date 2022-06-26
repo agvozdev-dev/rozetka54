@@ -8,18 +8,37 @@ import './accordion.scss'
 const Accordion = () => {
   const query = graphql`
     {
-      prices: contentJson {
-        electro {
-          serviceName
-          servicePrice
+      data:   contentJson {
+        mainPage {
+          electro {
+            serviceDescription
+            sliderDescription
+            title
+          }
+          internet {
+            serviceDescription
+            sliderDescription
+            title
+          }
+          video {
+            serviceDescription
+            sliderDescription
+            title
+          }
         }
-        internet {
-          serviceName
-          servicePrice
-        }
-        video {
-          serviceName
-          servicePrice
+        prices {
+          electro {
+            serviceName
+            servicePrice
+          }
+          internet {
+            serviceName
+            servicePrice
+          }
+          video {
+            serviceName
+            servicePrice
+          }
         }
       }
       accordionIcons: allFile(
@@ -70,7 +89,8 @@ const Accordion = () => {
 
   const queryResult = useStaticQuery(query)
 
-  const prices = queryResult.prices
+  const countOfPrices = 4
+  const prices = queryResult.data.prices
 
   const serviceImages = queryResult.accordionImages.edges.map((edge: any) => ({
     name: edge.node.name,
@@ -121,7 +141,7 @@ const Accordion = () => {
           key={index}
           title={service.title}
           description={service.description}
-          prices={prices[service.key]}
+          prices={prices[service.key].slice(0, 4)}
           arrowIcon={arrowTopIcon.gatsbyImageData}
           serviceImage={
             serviceImages.find(image => image.name === service.key)

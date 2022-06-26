@@ -84,6 +84,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/static/content/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-tsconfig-paths`,
       options: {
         configFile: `${__dirname}/tsconfig.json`,
