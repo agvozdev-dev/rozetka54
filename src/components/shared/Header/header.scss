@@ -4,6 +4,14 @@
 $padding-top-bottom-large: 18px;
 $padding-top-bottom-small: 7px;
 
+.header {
+  background-color: rgba(33, 33, 33, 0.5);
+
+  @include max-width($md) {
+    background-color: transparent;
+  }
+}
+
 .menu {
   outline-color: $primary-yellow;
 

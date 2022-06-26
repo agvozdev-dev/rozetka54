@@ -1,0 +1,73 @@
+@import '../../styles/var';
+@import '../../styles/mixins';
+
+.article {
+  color: $primary-blue;
+
+  &__banner {
+    background-image: url('../../../blog/second-post/2.jpg');
+    background-attachment: fixed;
+    margin-bottom: 30px;
+
+    margin: 0 auto 30px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__banner-text {
+    padding: 150px 15px;
+    font-size: 42px;
+    text-transform: uppercase;
+    color: $primary-yellow;
+    @include font('Philosopher', 700);
+    letter-spacing: 5px;
+
+    @include max-width($md) {
+      padding: 70px 15px;
+      letter-spacing: 3px;
+      font-size: 32px;
+    }
+
+    @include max-width($sm) {
+      padding: 70px 15px 20px 15px;
+      font-size: 24px;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    @include font('Roboto', 700);
+    font-size: 36px;
+
+    @include max-width($md) {
+      font-size: 32px;
+    }
+
+    @include max-width($sm) {
+      font-size: 24px;
+    }
+  }
+
+  &__date {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  &__image {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto 30px;
+  }
+
+  &__introduction,
+  &__content {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+}

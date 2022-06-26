@@ -23,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
   return (
     <>
       <title>{title}</title>
-      {/* <Header /> */}
+      <Header />
       <main>{children}</main>
     </>
   )
