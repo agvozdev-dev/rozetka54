@@ -44,7 +44,7 @@ export default () => {
               <MenuItem pageName="Главная" to="electro" />
               <MenuItem pageName="О нас" to="#" />
               <MenuItem pageName="Услуги и цены" to="#" />
-              <MenuItem pageName="Блог" to="#" />
+              <MenuItem pageName="Блог" to="/blog" />
               <MenuItem pageName="Партнеры" to="#" />
               <MenuItem pageName="Контакты" to="#" />
             </ul>

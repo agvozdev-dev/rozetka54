@@ -7,7 +7,7 @@ import Service from 'components/main-page/Service'
 
 export default () => (
   <>
-    <Layout>
+    <Layout pageTitle="Электромонтаж, видеонаблюдение, интернет">
       <MainScreen />
       <AboutUs />
       <PartnerSlider />
