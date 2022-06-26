@@ -1,3 +1,4 @@
+import { Price } from 'components/types/Price'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { useState } from 'react'
@@ -63,12 +64,9 @@ const Accordion = () => {
 
   const queryResult = useStaticQuery(query)
 
-  const prices = queryResult.electroPrices.edges.map((edge: any) => {
-    return {
-      name: edge.node.name,
-      price: edge.node.value,
-    }
-  })
+  const prices: Price[] = queryResult.electroPrices.edges.map(
+    (edge: any) => new Price(edge.node.name, edge.node.value)
+  )
 
   const serviceIcons = [
     {

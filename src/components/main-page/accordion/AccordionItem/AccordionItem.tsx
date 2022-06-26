@@ -1,5 +1,5 @@
-import LearnMoreButton from 'components/shared/buttons/LearnMoreButton'
 import Container from 'components/shared/Container'
+import TablePrice from 'components/shared/TablePrice'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
@@ -91,24 +91,7 @@ const AccordionItem = ({
             />
             <div className="service__description">{description}</div>
           </div>
-          <div className="price service__price">
-            <div className="price__head">
-              <div className="price__column price__head-cell">Услуга</div>
-              <div className="price__column price__head-cell">Цена</div>
-            </div>
-            <div className="price__body">
-              {prices.map((price, index) => (
-                <div className="price__row">
-                  <div className="price__column price__body-cell">
-                    {price.name}
-                  </div>
-                  <div className="price__column price__body-cell">
-                    {price.price}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <TablePrice prices={prices} tableExtraClass="service__table-price" />
           <Link className="service__learn-more-btn" to={serviceName}>
             Узнать больше
           </Link>
