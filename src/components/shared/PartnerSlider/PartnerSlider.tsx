@@ -28,7 +28,7 @@ export const query = graphql`
 `
 
 const autoplay = {
-  delay: 3000,
+  delay: 30000000,
   disableOnInteraction: false,
 }
 
@@ -38,6 +38,21 @@ const navigation = {
 }
 
 const modules = [Autoplay, Navigation]
+
+const breakpoints = {
+  320: {
+    slidesPerView: 1,
+  },
+  768: {
+    slidesPerView: 2,
+  },
+  992: {
+    slidesPerView: 3,
+  },
+  1200: {
+    slidesPerView: 5,
+  },
+}
 
 export default () => {
   const images = useStaticQuery(query).allFile.edges.map((edge: any) =>
@@ -53,9 +68,9 @@ export default () => {
             <Container>
               <Swiper
                 className="partner-slider"
+                slidesPerView={5}
                 autoplay={autoplay}
                 navigation={navigation}
-                slidesPerView={5}
                 loop={true}
                 modules={modules}
               >
