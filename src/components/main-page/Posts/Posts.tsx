@@ -3,9 +3,9 @@ import Title from 'components/shared/Title'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
-import './post.scss'
+import './styles.scss'
 
-const Post = () => {
+const Posts = () => {
   const nodes = useStaticQuery(query).allMdx.nodes
   return (
     <section className="post">
@@ -72,4 +72,4 @@ export const query = graphql`
   }
 `
 
-export default Post
+export default Posts
