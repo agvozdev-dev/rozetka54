@@ -1,5 +1,6 @@
 import { Price } from 'components/types/Price'
 import { graphql, useStaticQuery } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { useState } from 'react'
 import AccordionItem from '../AccordionItem'
@@ -8,7 +9,7 @@ import './accordion.scss'
 const Accordion = () => {
   const query = graphql`
     {
-      data:   contentJson {
+      data: contentJson {
         mainPage {
           electro {
             serviceDescription
@@ -38,20 +39,6 @@ const Accordion = () => {
           video {
             serviceName
             servicePrice
-          }
-        }
-      }
-      accordionIcons: allFile(
-        filter: {
-          relativeDirectory: { eq: "images/main-page/accordion-icons" }
-        }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              gatsbyImageData
-            }
-            name
           }
         }
       }
