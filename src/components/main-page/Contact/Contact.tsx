@@ -10,7 +10,7 @@ const Contact = () => {
   const contact = useStaticQuery(query).contentJson.contact
 
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <Container>
         <Title
           title="Наши контакты"
