@@ -2,8 +2,7 @@
 @import '../../../styles/mixins';
 
 .post {
-  //padding-top: 30px;
-
+  background-color: $primary-gray;
   &__list {
     display: flex;
     align-items: center;
