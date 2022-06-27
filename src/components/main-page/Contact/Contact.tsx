@@ -3,6 +3,7 @@ import HighlighterText from 'components/shared/HighlighterText'
 import Title from 'components/shared/Title'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
+import MaskInput from 'react-maskinput/lib'
 import './contact.scss'
 
 const Contact = () => {
@@ -43,16 +44,25 @@ const Contact = () => {
               <span className="contact__street">{contact.address}</span>
             </div>
           </address>
-          <form className="form">
-            <label className="form__phone-label" htmlFor="form-phone">
+          <form className="form contact__form">
+            <label className="form__label" htmlFor="form-phone">
               Ваш номер телефона
             </label>
-            <input className="form__phone" type="tel" id="form-phone" />
-            <label className="form__message-label" htmlFor="form-message">
+            <MaskInput
+              className="form__input form__phone"
+              alwaysShowMask
+              mask={'+7 (000) 000 00 00'}
+              showMask
+              maskChar="_"
+            />
+            <label className="form__label" htmlFor="form-message">
               Сообщение (необязательно)
             </label>
-            <textarea className="form__message" id="form-message"></textarea>
-            <button className="form__submit-btn">Отправить</button>
+            <textarea
+              className="form__input form__message"
+              id="form-message"
+            ></textarea>
+            <button className="form__btn">Отправить</button>
           </form>
         </div>
       </Container>

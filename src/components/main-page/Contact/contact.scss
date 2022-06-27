@@ -2,6 +2,7 @@
 @import '../../../styles/mixins';
 
 .contact {
+  padding-bottom: 30px;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -50,7 +51,47 @@
 }
 
 .form {
+  max-width: 550px;
+  padding: 30px;
+  background-color: $secondary-gray;
+  border-radius: 20px;
+
+  &__label {
+    color: $primary-blue;
+    @include font('Roboto', 400);
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__input,
+  .textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 18px;
+    background-color: $hover-gray;
+    margin-bottom: 30px;
+    @include font('Roboto', 400);
+    line-height: 1.5;
+  }
+
+  &__phone {
+    height: 60px;
+  }
+
   &__message {
     resize: none;
+    height: 120px;
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: $primary-yellow;
+    border-radius: 20px;
+    height: 60px;
   }
 }
