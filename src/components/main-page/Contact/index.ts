@@ -1,3 +1,3 @@
-import Post from './Contact'
+import Contact from './Contact'
 
-export default Post
+export default Contact

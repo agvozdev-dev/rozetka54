@@ -11,7 +11,11 @@
     "noUnusedLocals": false,
     "resolveJsonModule": true,
     "strictNullChecks": false,
-    "baseUrl": "./src"
+    "baseUrl": "src",
+    "paths": {
+      "shared/": ["components/shared"]
+    },
+    "include": ["src/**/*"]
   },
   "exclude": ["node_modules", "public", ".cache"]
 }

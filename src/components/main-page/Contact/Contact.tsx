@@ -9,6 +9,7 @@ import './contact.scss'
 const Contact = () => {
   const contact = useStaticQuery(query).contentJson.contact
 
+
   return (
     <section className="contact" id="contact">
       <Container>
@@ -49,6 +50,7 @@ const Contact = () => {
               Ваш номер телефона
             </label>
             <MaskInput
+              // @ts-ignore
               className="form__input form__phone"
               alwaysShowMask
               mask={'+7 (000) 000 00 00'}
