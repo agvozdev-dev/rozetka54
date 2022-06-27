@@ -16,10 +16,10 @@ const Post = () => {
           titleSearchWords={['новости']}
         />
         <ul className="post__list">
-          {nodes.map(node => {
+          {nodes.map((node: any, index: number) => {
             const to = `/blog/${node.slug}`
             return (
-              <li className="post__item">
+              <li className="post__item" key={`post__item-${index}`}>
                 <Link className="post__link" to={to}>
                   <GatsbyImage
                     className="post__image"
@@ -58,6 +58,7 @@ export const query = graphql`
         frontmatter {
           title
           introduction
+          image_alt
           image {
             childImageSharp {
               gatsbyImageData

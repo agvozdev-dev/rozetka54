@@ -18,7 +18,7 @@ const TablePrice: React.FC<TablePriceProps> = ({ prices, tableExtraClass }) => {
       </div>
       <div className="table-price__body">
         {prices.map((price: Price, index: number) => (
-          <div className="table-price__row">
+          <div className="table-price__row" key={`table-price__row-${index}`}>
             <div className="table-price__column table-price__body-cell">
               {price.serviceName}
             </div>
