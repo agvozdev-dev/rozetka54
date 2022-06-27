@@ -7,66 +7,40 @@
     justify-content: space-between;
   }
 
-  &__text--normal {
+  &__address {
     font-style: normal;
   }
 
-  &__address-part {
-    color: #fff;
-  }
-
-  &__heading,
-  &__description,
-  &__address-part {
+  &__heading {
+    @include font('Roboto', 700);
+    font-size: 36px;
     margin-bottom: 30px;
   }
 
-  &__title {
-    @include font('Roboto', 700);
-    font-size: 20px;
-  }
-
-  &__heading,
-  &__phone-link,
-  &__phone,
-  &__street {
-    @include font('Roboto', 700);
-  }
-
-  &__heading {
-    font-size: 36px;
-  }
-
-  &__description,
-  &__mail-link {
-    color: #fff;
+  &__description {
+    margin-bottom: 30px;
+    color: $primary-blue;
     @include font('Roboto', 400);
     font-size: 16px;
+    max-width: 550px;
   }
 
-  &__description,
-  &__street,
-  &__mail {
-    color: $primary-blue;
-  }
-
-  &__description {
-    min-width: 550px;
-  }
-
-  &__mail-link,
-  &__phone-link {
+  &__item {
+    color: #fff;
+    margin-bottom: 30px;
+    @include font('Roboto', 700);
     display: block;
     font-size: 20px;
   }
 
-  &__phone-title {
-    padding-right: 30px;
+  &__label {
+    display: inline-block;
+    min-width: 120px;
   }
 
-  &__street-title,
-  &__mail-title {
-    padding-right: 60px;
+  &__mail,
+  &__street {
+    color: $primary-blue;
   }
 
   &__phone {

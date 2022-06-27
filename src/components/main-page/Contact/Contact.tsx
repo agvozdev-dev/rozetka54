@@ -18,41 +18,29 @@ const Contact = () => {
         />
         <div className="contact__wrapper">
           <address className="contact__address">
-            <p className="contact__heading contact__text--normal">
+            <p className="contact__heading">
               <HighlighterText
                 text={'Звоните в любое время'}
                 searchWords={['Звоните']}
               />
             </p>
-            <p className="contact__description contact__text--normal">
+            <p className="contact__description">
               Позвоните нам сами, либо заполните форму обратной связи, и мы
               перезвоним вам
             </p>
-            <a
-              className="contact__address-part contact__phone-link contact__text--normal"
-              href={`tel:${contact.phone}`}
-            >
-              <span className="contact__title contact__phone-title">
-                Телефон:
-              </span>
+            <a className="contact__item" href={`tel:${contact.phone}`}>
+              <span className="contact__label">Телефон:</span>
               <span className="contact__phone">{contact.phone}</span>
             </a>
 
-            <a
-              className="contact__address-part contact__mail-link contact__text--normal"
-              href={`mailto:${contact.mail}`}
-            >
-              <span className="contact__title contact__mail-title">Почта:</span>
+            <a className="contact__item" href={`mailto:${contact.mail}`}>
+              <span className="contact__label">Почта:</span>
               <span className="contact__mail">{contact.mail}</span>
             </a>
 
-            <div className="contact__address-part contact__street-wrapper">
-              <span className="contact__title contact__street-title contact__text--normal">
-                Адрес:
-              </span>
-              <span className="contact__street contact__text--normal">
-                {contact.address}
-              </span>
+            <div className="contact__item">
+              <span className="contact__label">Адрес:</span>
+              <span className="contact__street">{contact.address}</span>
             </div>
           </address>
           <form className="form">
