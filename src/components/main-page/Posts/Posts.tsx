@@ -8,37 +8,37 @@ import './styles.scss'
 const Posts = () => {
   const nodes = useStaticQuery(query).allMdx.nodes
   return (
-    <section className="post">
+    <section className="posts">
       <Container>
         <Title
           title="Статьи и новости"
           subtitle="Делимся опытом"
           titleSearchWords={['новости']}
         />
-        <ul className="post__list">
+        <ul className="posts__list">
           {nodes.map((node: any, index: number) => {
             const to = `/blog/${node.slug}`
             return (
-              <li className="post__item" key={`post__item-${index}`}>
-                <Link className="post__link" to={to}>
+              <li className="posts__item" key={`posts__item-${index}`}>
+                <Link className="posts__link" to={to}>
                   <GatsbyImage
-                    className="post__image"
+                    className="posts__image"
                     image={getImage(node.frontmatter.image)}
                     alt={node.frontmatter.image_alt}
                   />
                 </Link>
 
-                <div className="post__content">
-                  <div className="post__content-wrapper">
-                    <Link className="post__link post__title-link" to={to}>
-                      <p className="post__title">{node.frontmatter.title}</p>
+                <div className="posts__content">
+                  <div className="posts__content-wrapper">
+                    <Link className="posts__link posts__title-link" to={to}>
+                      <p className="posts__title">{node.frontmatter.title}</p>
                     </Link>
 
-                    <p className="post__introduction">
+                    <p className="posts__introduction">
                       {node.frontmatter.introduction}
                     </p>
                   </div>
-                  <Link className="post__link post__link-read" to={to}>
+                  <Link className="posts__link posts__link-read" to={to}>
                     Читать
                   </Link>
                 </div>
