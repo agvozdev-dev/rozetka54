@@ -5,7 +5,7 @@ import AboutUs from 'components/main-page/about-us/AboutUs'
 import PartnerSlider from 'components/shared/PartnerSlider'
 import Service from 'components/main-page/Service'
 import Post from 'components/main-page/Post'
-import Contact from 'components/main-page/Contact'
+import Contacts from "components/main-page/Contacts";
 
 export default () => (
   <>
@@ -15,7 +15,7 @@ export default () => (
       <PartnerSlider />
       <Service />
       <Post />
-      <Contact />
+      <Contacts />
     </Layout>
   </>
 )

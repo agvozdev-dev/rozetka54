@@ -1,56 +1,6 @@
 @import '../../../styles/var';
 @import '../../../styles/mixins';
 
-.contact {
-  padding-bottom: 30px;
-  &__wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__address {
-    font-style: normal;
-    margin-right: 30px;
-  }
-
-  &__heading {
-    @include font('Roboto', 700);
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-
-  &__description {
-    margin-bottom: 30px;
-    color: $primary-blue;
-    @include font('Roboto', 400);
-    font-size: 16px;
-    max-width: 550px;
-  }
-
-  &__item {
-    color: #fff;
-    margin-bottom: 30px;
-    @include font('Roboto', 700);
-    display: block;
-    font-size: 20px;
-  }
-
-  &__label {
-    display: inline-block;
-    min-width: 120px;
-  }
-
-  &__mail,
-  &__street {
-    color: $primary-blue;
-  }
-
-  &__phone {
-    font-size: 16px;
-    color: $primary-yellow;
-  }
-}
-
 .form {
   max-width: 550px;
   padding: 30px;

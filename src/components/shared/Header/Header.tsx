@@ -20,7 +20,7 @@ const menuBtnClick = () => {
 }
 
 export default () => {
-  const phone = useStaticQuery(query).contentJson.contact.phone
+  const phone = useStaticQuery(query).contentJson.contacts.phone
 
   return (
     <header className="header">
@@ -78,7 +78,7 @@ export default () => {
 export const query = graphql`
   {
     contentJson {
-      contact {
+      contacts {
         phone
       }
     }
