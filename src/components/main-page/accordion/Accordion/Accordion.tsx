@@ -1,10 +1,11 @@
 import { Price } from 'components/types/Price'
 import { graphql, useStaticQuery } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image'
+import {getImage, IGatsbyImageData} from 'gatsby-plugin-image'
 import React from 'react'
 import { useState } from 'react'
 import AccordionItem from '../AccordionItem'
 import './accordion.scss'
+import {Image} from "../../../types/Image";
 
 const Accordion = () => {
   const query = graphql`
@@ -79,10 +80,8 @@ const Accordion = () => {
   const countOfPrices = 4
   const prices = queryResult.data.prices
 
-  const serviceImages = queryResult.accordionImages.edges.map((edge: any) => ({
-    name: edge.node.name,
-    gatsbyImageData: edge.node.childImageSharp.gatsbyImageData,
-  }))
+  const serviceImages: Image[] = queryResult.accordionImages.edges.map((edge: any) =>
+      new Image(edge.node.name, getImage(edge.node)))
 
   const arrowTopIcon = queryResult.arrowTopIcon.edges.map((edge: any) => ({
     gatsbyImageData: edge.node.childImageSharp.gatsbyImageData,
@@ -109,13 +108,17 @@ const Accordion = () => {
     },
   ]
 
-  const [clicked, setClicked] = useState('0')
+  const [clicked, setClicked] = useState(0)
 
-  const handleToggle = (index: any) => {
+  const handleToggle = (e: any, index: number) => {
     if (clicked === index) {
-      return setClicked('0')
+      const nonExistingElementIndex = -1
+
+      return setClicked(nonExistingElementIndex)
     }
     setClicked(index)
+
+    e.target.scrollIntoView(true)
   }
 
   return (
@@ -123,7 +126,7 @@ const Accordion = () => {
       {data.map((service, index) => (
         <AccordionItem
           serviceName={service.key}
-          onToggle={() => handleToggle(index)}
+          onClick={(e: any) => handleToggle(e, index)}
           active={clicked === index}
           key={index}
           title={service.title}
@@ -131,8 +134,8 @@ const Accordion = () => {
           prices={prices[service.key].slice(0, 4)}
           arrowIcon={arrowTopIcon.gatsbyImageData}
           serviceImage={
-            serviceImages.find(image => image.name === service.key)
-              .gatsbyImageData
+            serviceImages.find((image: Image) => image.name === service.key)
+              .image
           }
         />
       ))}
