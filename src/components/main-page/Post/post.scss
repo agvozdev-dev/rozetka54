@@ -2,7 +2,7 @@
 @import '../../../styles/mixins';
 
 .post {
-  padding-top: 30px;
+  //padding-top: 30px;
 
   &__list {
     display: flex;
@@ -13,17 +13,27 @@
 
   &__item {
     display: flex;
+    align-items: center;
     border-radius: 20px;
     max-width: 1000px;
     width: 100%;
     background-color: rgba(62, 62, 62, 0.25);
     margin-bottom: 30px;
+
+    @include max-width($xl) {
+      flex-direction: column;
+      background-color: transparent;
+    }
   }
 
   &__image {
     border-radius: 20px;
     margin-right: 30px;
-    max-width: 400px;
+    border-radius: 20px 0 0 20px;
+    height: 257px;
+    @include max-width($xl) {
+      display: none;
+    }
   }
 
   &__content {
@@ -34,12 +44,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 15px;
+
+    @include max-width($xl) {
+      background-color: rgba(62, 62, 62, 0.25);
+
+      border-radius: 20px;
+      width: 100%;
+    }
   }
 
   &__title-link {
     display: block;
-    padding-top: 15px;
     margin-bottom: 20px;
+
+    @include max-width($xl) {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -49,6 +70,7 @@
 
   &__introduction {
     color: $primary-blue;
+    margin-bottom: 15px;
   }
 
   &__link {
@@ -65,6 +87,10 @@
     padding-left: 30px;
     padding-bottom: 15px;
 
+    @include max-width($xl) {
+      text-align: center;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -74,6 +100,11 @@
       height: 20px;
       left: 0;
       bottom: 16px;
+
+      @include max-width($xl) {
+        left: 50%;
+        transform: translateX(-55px);
+      }
     }
   }
 }
