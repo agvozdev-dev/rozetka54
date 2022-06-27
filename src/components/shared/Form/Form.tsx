@@ -1,6 +1,6 @@
 import React from 'react'
 import MaskInput from 'react-maskinput/lib'
-import './form.scss'
+import './styles.scss'
 
 const Form = () => (
     <form className="form">
