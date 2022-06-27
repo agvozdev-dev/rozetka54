@@ -2,13 +2,13 @@ import React from 'react'
 import './highlighter-text.scss'
 import Highlighter from 'react-highlight-words'
 
-type MarkTextProps = {
+type HighlighterTextProps = {
   text: string
   searchWords: string[]
   className?: string
 }
 
-const HighlighterText: React.FC<MarkTextProps> = ({
+const HighlighterText: React.FC<HighlighterTextProps> = ({
   text,
   searchWords,
   className,
@@ -18,6 +18,7 @@ const HighlighterText: React.FC<MarkTextProps> = ({
     searchWords={searchWords}
     textToHighlight={text}
     className={className}
+    autoEscape={true}
   />
 )
 

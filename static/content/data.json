@@ -1,4 +1,9 @@
 {
+  "contact": {
+    "phone": "+7 123 456 78 90",
+    "mail": "bortnikov-electrogroup@mail.ru",
+    "address": "г. Новосибирск, ул. Костычева 8"
+  },
   "mainPage": {
     "electro": {
       "title": "Электромонтаж",
