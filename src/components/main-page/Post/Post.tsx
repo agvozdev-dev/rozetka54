@@ -20,14 +20,17 @@ const Post = () => {
             const to = `/blog/${node.slug}`
             return (
               <li className="post__item">
-                <GatsbyImage
-                  className="post__image"
-                  image={getImage(node.frontmatter.image)}
-                  alt="dfcsd"
-                />
+                <Link className="post__link" to={to}>
+                  <GatsbyImage
+                    className="post__image"
+                    image={getImage(node.frontmatter.image)}
+                    alt={node.frontmatter.image_alt}
+                  />
+                </Link>
+
                 <div className="post__content">
                   <div className="post__content-wrapper">
-                    <Link className="post__title-link" to={to}>
+                    <Link className="post__link post__title-link" to={to}>
                       <p className="post__title">{node.frontmatter.title}</p>
                     </Link>
 
@@ -35,7 +38,7 @@ const Post = () => {
                       {node.frontmatter.introduction}
                     </p>
                   </div>
-                  <Link className="post__link" to={to}>
+                  <Link className="post__link post__link-read" to={to}>
                     Читать
                   </Link>
                 </div>
