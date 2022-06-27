@@ -7,7 +7,6 @@ import './post.scss'
 
 const Post = () => {
   const nodes = useStaticQuery(query).allMdx.nodes
-
   return (
     <section className="post">
       <Container>
@@ -17,22 +16,32 @@ const Post = () => {
           titleSearchWords={['новости']}
         />
         <ul className="post__list">
-          {nodes.map(node => (
-            <li className="post__item">
-              <GatsbyImage
-                className="post__image"
-                image={getImage(node.frontmatter.image)}
-                alt="dfcsd"
-              />
-              <div className="post__description">
-                <p className="post__title">{node.frontmatter.title}</p>
-                <p className="post__introduction">
-                  {node.frontmatter.introduction}
-                </p>
-                <Link to={`/blog/${node.slug}`}>Читать</Link>
-              </div>
-            </li>
-          ))}
+          {nodes.map(node => {
+            const to = `/blog/${node.slug}`
+            return (
+              <li className="post__item">
+                <GatsbyImage
+                  className="post__image"
+                  image={getImage(node.frontmatter.image)}
+                  alt="dfcsd"
+                />
+                <div className="post__content">
+                  <div className="post__content-wrapper">
+                    <Link className="post__title-link" to={to}>
+                      <p className="post__title">{node.frontmatter.title}</p>
+                    </Link>
+
+                    <p className="post__introduction">
+                      {node.frontmatter.introduction}
+                    </p>
+                  </div>
+                  <Link className="post__link" to={to}>
+                    Читать
+                  </Link>
+                </div>
+              </li>
+            )
+          })}
         </ul>
       </Container>
     </section>

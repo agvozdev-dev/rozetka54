@@ -7,7 +7,7 @@ import './blog.scss'
 import Container from 'components/shared/Container'
 
 const BlogPage = ({ data }) => {
-  const image = getImage(data.mdx.frontmatter.hero_image)
+  const image = getImage(data.mdx.frontmatter.image)
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -23,7 +23,7 @@ const BlogPage = ({ data }) => {
           <GatsbyImage
             className="article__image"
             image={image}
-            alt={data.mdx.frontmatter.hero_image_alt}
+            alt={data.mdx.frontmatter.image_alt}
           />
           <MDXRenderer className="re">{data.mdx.body}</MDXRenderer>
         </Container>
