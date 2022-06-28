@@ -12,6 +12,7 @@ import CallButton from 'components/shared/buttons/CallButton'
 import Container from 'components/shared/Container'
 import { graphql, useStaticQuery } from 'gatsby'
 import {MainSlider} from "components/types/MainSlider";
+import {array} from "prop-types";
 
 type SliderItemType = {
   title: string
@@ -54,11 +55,14 @@ export default () => {
   const queryResult = useStaticQuery(query)
   const mainPage = queryResult.data.mainPage
 
-  const sliderData =  queryResult.images.nodes.map((node: any) => {
+  let sliderData =  queryResult.images.nodes.map((node: any) => {
     const title = mainPage[node.name].title
     const description = mainPage[node.name].sliderDescription
+    const order = mainPage[node.name].order
 
-    return new MainSlider(title, description, node.name, getImage(node))
+    return new MainSlider(title, description, node.name, getImage(node), order)
+  }).sort(function(a: MainSlider, b: MainSlider) {
+    return ((a.order < b.order) ? -1 : ((a.order > a.order) ? 1 : 0));
   })
 
   return (
@@ -70,8 +74,8 @@ export default () => {
       slidesPerView="auto"
       modules={modules}
     >
-      {sliderData.map((data: MainSlider) => (
-          <SwiperSlide className="service-slider__item">
+      {sliderData.map((data: MainSlider, index: number) => (
+          <SwiperSlide className="service-slider__item" key={`service-slider-item-${index}`}>
             <SliderItem
                 title={data.title}
                 description={data.description}
@@ -94,14 +98,17 @@ const query = graphql`
       data: contentJson {
         mainPage {
           electro {
-            sliderDescription
-            title
-          }
-          internet {
+            order
             sliderDescription
             title
           }
           video {
+            order
+            sliderDescription
+            title
+          }
+          internet {
+            order
             sliderDescription
             title
           }
