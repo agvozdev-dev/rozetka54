@@ -98,6 +98,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `service`,
+        path: `${__dirname}/service`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `main-slider-images`,
         path: `${__dirname}/static/images/main-page/main-slider`,
       },

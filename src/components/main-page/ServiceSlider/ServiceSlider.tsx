@@ -29,7 +29,7 @@ const SliderItem : React.FC<SliderItemType> = ({ title, description, to }) => (
           <h2 className="service-slider__header">{title}</h2>
           <p className="service-slider__description">{description}</p>
           <div className="service-slider__btns-wrapper">
-            <LearnMoreButton to={to} />
+            <LearnMoreButton to={`/service/${to}`} />
             <CallButton />
           </div>
         </div>

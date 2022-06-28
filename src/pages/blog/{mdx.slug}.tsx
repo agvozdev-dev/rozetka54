@@ -6,9 +6,9 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import './blog.scss'
 import Container from 'components/shared/Container'
 
+// @ts-ignore
 const BlogPage = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.image)
-
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div className="article__banner">
