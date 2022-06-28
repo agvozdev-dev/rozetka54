@@ -95,6 +95,13 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `main-slider-images`,
+        path: `${__dirname}/static/images/main-page/main-slider`,
+      },
+    },
     `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-tsconfig-paths`,

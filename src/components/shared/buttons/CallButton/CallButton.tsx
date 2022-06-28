@@ -1,9 +1,23 @@
 import React from 'react'
 import './call-button.scss'
-import data from 'content/shared.yaml'
+import {graphql, useStaticQuery} from "gatsby";
 
-export default () => (
-  <a className="call-btn" href={`tel:${data.phone}`}>
-    Позвонить
-  </a>
-)
+export default () => {
+    const { phone } = useStaticQuery(query).contentJson.contacts
+
+    return (
+        <a className="call-btn" href={`tel:${phone}`}>
+            Позвонить
+        </a>
+    )
+}
+
+export const query = graphql`
+  {
+    contentJson {
+      contacts {
+        phone
+      }
+    }
+  }
+`

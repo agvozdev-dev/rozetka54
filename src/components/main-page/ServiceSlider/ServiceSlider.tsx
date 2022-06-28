@@ -7,39 +7,28 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 import { Autoplay, Navigation, Pagination } from 'swiper'
-import data from 'content/main-page.yaml'
 import LearnMoreButton from 'components/shared/buttons/LearnMoreButton'
 import CallButton from 'components/shared/buttons/CallButton'
 import Container from 'components/shared/Container'
 import { graphql, useStaticQuery } from 'gatsby'
+import {MainSlider} from "components/types/MainSlider";
 
-export const query = graphql`
-  {
-    allFile(
-      filter: { relativeDirectory: { eq: "images/main-page/main-slider" } }
-      sort: { fields: name }
-    ) {
-      edges {
-        node {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-    }
-  }
-`
+type SliderItemType = {
+  title: string
+  description: string
+  to: string
+}
 
-const SliderItem = (props: any) => (
+const SliderItem : React.FC<SliderItemType> = ({ title, description, to }) => (
   <div className="service-slider__outer-wrapper">
     <Container>
       <div className="service-slider__content-wrapper">
         <div className="swiper-button-prev service-slider__button-prev"></div>
         <div className="service-slider__content">
-          <h2 className="service-slider__header">{props.header}</h2>
-          <p className="service-slider__description">{props.description}</p>
+          <h2 className="service-slider__header">{title}</h2>
+          <p className="service-slider__description">{description}</p>
           <div className="service-slider__btns-wrapper">
-            <LearnMoreButton to={'electro'} />
+            <LearnMoreButton to={to} />
             <CallButton />
           </div>
         </div>
@@ -48,11 +37,6 @@ const SliderItem = (props: any) => (
     </Container>
   </div>
 )
-
-const getSliderItemData = (index: number) => ({
-  header: data.slider[index].header,
-  description: data.slider[index].description,
-})
 
 const autoplay = {
   delay: 400000,
@@ -67,9 +51,15 @@ const navigation = {
 const modules = [Autoplay, Navigation, Pagination]
 
 export default () => {
-  const images = useStaticQuery(query).allFile.edges.map((edge: any) =>
-    getImage(edge.node.childImageSharp.gatsbyImageData)
-  )
+  const queryResult = useStaticQuery(query)
+  const mainPage = queryResult.data.mainPage
+
+  const sliderData =  queryResult.images.nodes.map((node: any) => {
+    const title = mainPage[node.name].title
+    const description = mainPage[node.name].sliderDescription
+
+    return new MainSlider(title, description, node.name, getImage(node))
+  })
 
   return (
     <Swiper
@@ -80,22 +70,52 @@ export default () => {
       slidesPerView="auto"
       modules={modules}
     >
-      {images.map((image: any, index: number) => {
-        const data = getSliderItemData(index)
-        return (
-          <SwiperSlide className="service-slider__item" key={index}>
+      {sliderData.map((data: MainSlider) => (
+          <SwiperSlide className="service-slider__item">
             <SliderItem
-              header={data.header}
-              description={data.description}
+                title={data.title}
+                description={data.description}
+                to={data.to}
             ></SliderItem>
             <GatsbyImage
-              image={image}
-              className="service-slider__img"
-              alt="slider image"
+                image={getImage(data.image)}
+                className="service-slider__img"
+                alt="slider image"
             />
           </SwiperSlide>
-        )
-      })}
+      ))}
+
     </Swiper>
   )
 }
+
+const query = graphql`
+    {
+      data: contentJson {
+        mainPage {
+          electro {
+            sliderDescription
+            title
+          }
+          internet {
+            sliderDescription
+            title
+          }
+          video {
+            sliderDescription
+            title
+          }
+        }
+      }
+      images:  allFile(filter: {relativeDirectory: {eq: "images/main-page/main-slider"}}) {
+        nodes {
+          childImageSharp {
+            gatsbyImageData
+          }
+          name
+        }
+      }
+    }
+  `
+
+
