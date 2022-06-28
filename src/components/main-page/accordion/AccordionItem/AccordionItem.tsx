@@ -73,28 +73,28 @@ const AccordionItem = ({
     : {height: '0px'}
 
   return (
-    <li className={`service__item ${active ? 'service__item--active' : ''}`}>
-      <button className="service__btn" onClick={onClick}>
-        <div className="service__icon-wrapper">{serviceIcons[serviceName]}</div>
-        <h2 className="service__title">{title}</h2>
+    <li className={`accordion__item ${active ? 'accordion__item--active' : ''}`}>
+      <button className="accordion__btn" onClick={onClick}>
+        <div className="accordion__icon-wrapper">{serviceIcons[serviceName]}</div>
+        <h2 className="accordion__title">{title}</h2>
         <GatsbyImage
-          className="service__expand-icon"
+          className="accordion__expand-icon"
           image={arrowIcon}
           alt="arrow icon"
         />
       </button>
-      <div ref={contentEl} className="service__item-content" style={contentCSS}>
+      <div ref={contentEl} className="accordion__item-content" style={contentCSS}>
         <Container>
-          <div className="service__item-wrapper">
+          <div className="accordion__item-wrapper">
             <GatsbyImage
-              className="service__image"
+              className="accordion__image"
               image={serviceImage}
-              alt="service image"
+              alt="accordion image"
             />
-            <div className="service__description">{description}</div>
+            <div className="accordion__description">{description}</div>
           </div>
-          <TablePrice prices={prices} tableExtraClass="service__table-price"/>
-          <Link className="service__learn-more-btn" to={serviceName}>
+          <TablePrice prices={prices} tableExtraClass="accordion__table-price"/>
+          <Link className="accordion__learn-more-btn" to={serviceName}>
             Узнать больше
           </Link>
         </Container>

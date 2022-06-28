@@ -1,7 +1,7 @@
 @import '../../../../styles/var';
 @import '../../../../styles/mixins';
 
-.service {
+.accordion {
   &__title {
     @include font('Roboto', 700);
 

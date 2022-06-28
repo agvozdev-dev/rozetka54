@@ -7,25 +7,12 @@
   display: block;
   text-align: center;
   border-radius: 10px;
-  @include font('Roboto', 700);
+  @include font('Roboto', 400);
   font-size: 16px;
   transition: all $delay;
   width: 175px;
-  height: 70px;
-  line-height: 70px;
-
-  // @media (max-width: 992px) {
-  //   width: 150px;
-  //   height: 65px;
-  //   line-height: 65px;
-  // }
-
-  // @media (max-width: 576px) {
-  //   font-size: 14px;
-  //   width: 120px;
-  //   height: 50px;
-  //   line-height: 50px;
-  // }
+  height: 60px;
+  line-height: 60px;
 
   /// --- portrait
 

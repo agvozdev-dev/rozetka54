@@ -122,7 +122,7 @@ const Accordion = () => {
   }
 
   return (
-    <ul className="service__list">
+    <ul className="accordion__list">
       {data.map((service, index) => (
         <AccordionItem
           serviceName={service.key}

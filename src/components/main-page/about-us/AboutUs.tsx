@@ -100,7 +100,7 @@ export default () => {
           ))}
         </ul>
 
-        <CallbackButton href={'#'} extraClassName="about-us__callback-btn" />
+        <CallbackButton href={'#contacts'} extraClassName="about-us__callback-btn" />
       </Container>
     </section>
   )
