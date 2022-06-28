@@ -7,17 +7,31 @@
   &__content {
     display: flex;
     justify-content: center;
+
+    @include max-width($lg) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__address {
     font-style: normal;
     margin-right: 30px;
+
+    @include max-width($lg) {
+      margin-right: 0;
+    }
   }
 
   &__heading {
     @include font('Roboto', 700);
     font-size: 36px;
     margin-bottom: 30px;
+
+    @include max-width($lg) {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -35,6 +49,11 @@
     @include font('Roboto', 700);
     display: block;
     font-size: 20px;
+
+    @include max-width($lg) {
+      text-align: left;
+      font-size: 16px;
+    }
   }
 
   &__label {

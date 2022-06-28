@@ -3,8 +3,7 @@ import HighlighterText from 'components/shared/HighlighterText'
 import Title from 'components/shared/Title'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import MaskInput from 'react-maskinput/lib'
-import './contacts.scss'
+import './styles.scss'
 import Form from "components/shared/Form";
 
 const Contacts = () => {
@@ -22,7 +21,7 @@ const Contacts = () => {
           <address className="contacts__address">
             <p className="contacts__heading">
               <HighlighterText
-                text={'Звоните в любое время'}
+                text="Звоните в любое время"
                 searchWords={['Звоните']}
               />
             </p>
