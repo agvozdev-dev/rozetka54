@@ -68,6 +68,7 @@
 
   &__wrapper {
     padding-top: 30px;
+    background-color: $primary-gray;
   }
 
   &__text {
@@ -92,29 +93,49 @@
     border-radius: 20px;
     margin-right: 30px;
     margin-bottom: 30px;
-    flex-basis: 50%;
+    width: 50%;
+
+    @include max-width($lg) {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__item-top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include max-width($sm) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__icon {
     width: 60px;
     height: 60px;
     margin-right: 30px;
+
+    @include max-width($sm) {
+      //width: 50px;
+      //height: 50px;
+      margin: 0 0 30px 0;
+    }
   }
 
   &__item-title-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     @include font('Roboto', 700);
     font-size: 28px;
     border-bottom: 1px solid $primary-yellow;
     padding-bottom: 10px;
+
+    @include max-width($sm) {
+      font-size: 20px;
+    }
   }
 
   &__item-number {
@@ -127,5 +148,11 @@
 
   &__point-item {
     margin-bottom: 15px;
+  }
+
+  &__item-wrapper {
+    @include max-width($sm) {
+      margin: 0 auto;
+    }
   }
 }
