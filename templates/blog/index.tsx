@@ -3,12 +3,13 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import './blog.scss'
+import './styles.scss'
 import Container from 'components/shared/Container'
 
 // @ts-ignore
 const BlogPage = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.image)
+
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div className="article__banner">
@@ -33,20 +34,23 @@ const BlogPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query ($id: String) {
-    mdx(id: { eq: $id }) {
-      body
+  query BlogBySlug($slug: String!) {
+    mdx(
+      fields: { slug: { eq: $slug } }
+      frontmatter: { type: { eq: "blog" } }
+    ) {
       frontmatter {
         title
-        date(formatString: "DD.MM.YYYY")
         introduction
-        image_alt
         image {
           childImageSharp {
             gatsbyImageData
           }
         }
+        image_alt 
       }
+      body
+      slug
     }
   }
 `

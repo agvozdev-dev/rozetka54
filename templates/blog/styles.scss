@@ -1,14 +1,12 @@
-@import '../../styles/var';
-@import '../../styles/mixins';
+@import '../../src/styles/var';
+@import '../../src/styles/mixins';
 
 .article {
   color: $primary-blue;
 
   &__banner {
-    background-image: url('../../../static/images/blog/bg.jpg');
+    background-image: url('../../static/images/blog/bg.jpg');
     background-attachment: fixed;
-    margin-bottom: 30px;
-
     margin: 0 auto 30px auto;
     text-align: center;
     display: flex;
@@ -59,15 +57,14 @@
 
   &__image {
     max-width: 500px;
-    display: block;
+    display: block !important;
     margin: 0 auto 30px;
   }
 
   &__introduction,
   &__content {
     max-width: 750px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
     line-height: 1.5;
-    margin-bottom: 30px;
   }
 }

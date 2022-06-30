@@ -53,7 +53,8 @@ const Posts = () => {
 
 export const query = graphql`
   {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }
+           filter: {frontmatter: {type: {eq: "blog"}}}) {
       nodes {
         frontmatter {
           title

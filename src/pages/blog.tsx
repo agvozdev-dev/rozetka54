@@ -7,7 +7,6 @@ import Layout from 'components/shared/Layout'
 
 // @ts-ignore
 const BlogPage = ({ data }) => {
-  console.log("---------------------------")
   return (
     <Layout pageTitle="My Blog Posts">
       {data.allMdx.nodes.map((node: any) => (
