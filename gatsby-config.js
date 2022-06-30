@@ -45,6 +45,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `prices`,
+        path: `${__dirname}/content/prices`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `main-slider-images`,
         path: `${__dirname}/static/images/main-page/main-slider`,
       },
