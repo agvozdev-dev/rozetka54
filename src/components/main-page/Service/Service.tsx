@@ -6,7 +6,7 @@ import Accordion from '../accordion/Accordion'
 
 const Service = () => {
   return (
-    <section className="service">
+    <section className="service" id="#service">
       <Title
         title="Услуги и цены"
         subtitle="Доверьтесь профессионалам"

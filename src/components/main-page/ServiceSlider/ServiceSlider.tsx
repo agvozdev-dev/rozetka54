@@ -12,7 +12,6 @@ import CallButton from 'components/shared/buttons/CallButton'
 import Container from 'components/shared/Container'
 import { graphql, useStaticQuery } from 'gatsby'
 import {MainSlider} from "components/types/MainSlider";
-import {array} from "prop-types";
 
 type SliderItemType = {
   title: string
