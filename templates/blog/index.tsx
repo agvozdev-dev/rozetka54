@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import './styles.scss'
 import Container from 'components/shared/Container'
+import PageTitle from "../../src/components/shared/PageTitle";
 
 // @ts-ignore
 const BlogPage = ({ data }) => {
@@ -12,9 +13,7 @@ const BlogPage = ({ data }) => {
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <div className="article__banner">
-        <p className="article__banner-text">Делимся опытом</p>
-      </div>
+      <PageTitle text="Делимся опытом" />
       <article className="article">
         <Container>
           <h1 className="article__heading">{data.mdx.frontmatter.title}</h1>

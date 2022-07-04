@@ -4,36 +4,6 @@
 .article {
   color: $primary-blue;
 
-  &__banner {
-    background-image: url('../../static/images/blog/bg.jpg');
-    background-attachment: fixed;
-    margin: 0 auto 30px auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__banner-text {
-    padding: 150px 15px;
-    font-size: 42px;
-    text-transform: uppercase;
-    color: $primary-yellow;
-    @include font('Philosopher', 700);
-    letter-spacing: 5px;
-
-    @include max-width($md) {
-      padding: 70px 15px;
-      letter-spacing: 3px;
-      font-size: 32px;
-    }
-
-    @include max-width($sm) {
-      padding: 70px 15px 20px 15px;
-      font-size: 24px;
-    }
-  }
-
   &__heading {
     text-align: center;
     margin-bottom: 20px;
