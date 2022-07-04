@@ -5,12 +5,18 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import './styles.scss'
 import Form from "components/shared/Form";
+import classNames from "classnames";
 
-const Contacts = () => {
+type Contacts = {
+  extraClass?: string
+}
+
+const Contacts: React.FC<Contacts> = ({ extraClass }) => {
+  const classes = classNames("contacts", extraClass)
   const { phone, mail, address } = useStaticQuery(query).contentJson.contacts
 
   return (
-    <section className="contacts" id="contacts">
+    <section className={classes} id="contacts">
       <Container>
         <Title
           title="Наши контакты"

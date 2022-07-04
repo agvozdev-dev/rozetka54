@@ -44,7 +44,7 @@ export default () => {
             <ul className="menu__list" id="menu-list">
               <MenuItem pageName="Главная" to="/" />
               <MenuItem pageName="О нас" to="#" />
-              <MenuItem pageName="Услуги и цены" to="#service" />
+              <MenuItem pageName="Услуги и цены" to="/services" />
               <MenuItem pageName="Блог" to="/blog" />
               <MenuItem pageName="Партнеры" to="#" />
               <MenuItem pageName="Контакты" to="#contact" />
