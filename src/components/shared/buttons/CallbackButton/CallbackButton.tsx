@@ -1,6 +1,6 @@
-import React from 'react'
 import './callback-button.scss'
 import classNames from 'classnames'
+import React from 'react'
 
 type CallbackButtonProps = {
   href?: string

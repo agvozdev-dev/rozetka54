@@ -1,7 +1,7 @@
-import React from 'react'
 import './call-button.scss'
-import {graphql, useStaticQuery} from "gatsby";
 import classNames from "classnames";
+import {graphql, useStaticQuery} from "gatsby";
+import React from 'react'
 
 type CallButtonProps = {
     extraClass?: string

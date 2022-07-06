@@ -1,9 +1,9 @@
 import React from 'react'
-import './styles.scss'
 import {graphql, useStaticQuery} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
-import TablePrice from "../../shared/TablePrice";
 import LearnMoreButton from "../../shared/buttons/LearnMoreButton";
+import TablePrice from "../../shared/TablePrice";
+import './styles.scss'
 
 const ServicesAndPrices = () => {
   const { allMdx } = useStaticQuery(query)
