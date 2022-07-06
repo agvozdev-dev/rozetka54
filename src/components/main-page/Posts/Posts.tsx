@@ -2,7 +2,7 @@ import Container from 'components/shared/Container'
 import Title from 'components/shared/Title'
 import React from 'react'
 import './styles.scss'
-import PostsItems from "../PostsItems";
+import PostsItems from "../../shared/PostsItems";
 
 const Posts = () => {
   return (
