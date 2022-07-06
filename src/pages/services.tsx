@@ -4,7 +4,7 @@ import Layout from 'components/shared/Layout'
 import PageTitle from "../components/shared/PageTitle";
 import Container from "../components/shared/Container";
 import ServicesAndPrices from "../components/shared/ServicesAndPrices";
-import Contacts from "../components/main-page/Contacts";
+import Contacts from "../components/shared/Contacts";
 
 // @ts-ignore
 const Services = () => {

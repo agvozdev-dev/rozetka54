@@ -4,11 +4,17 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import './styles.scss'
+import classNames from "classnames";
 
-const Posts = () => {
+type PostsProps = {
+    extraClass?: string
+}
+
+const Posts: React.FC<PostsProps> = ({extraClass}) => {
+  const classes = classNames('posts', extraClass)
   const nodes = useStaticQuery(query).allMdx.nodes
   return (
-    <section className="posts">
+    <section className={classes}>
       <Container>
         <Title
           title="Статьи и новости"

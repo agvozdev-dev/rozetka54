@@ -8,7 +8,7 @@ import CallButton from 'components/shared/buttons/CallButton'
 import Container from 'components/shared/Container'
 import HighlighterText from "components/shared/HighlighterText";
 import TextPoint from "../../src/components/shared/TextPoint";
-import Contacts from "components/main-page/Contacts";
+import Contacts from "components/shared/Contacts";
 
 // @ts-ignore
 const ServicePage = ({data}) => {
