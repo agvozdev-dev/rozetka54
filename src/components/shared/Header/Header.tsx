@@ -1,5 +1,5 @@
 import React from 'react'
-import './header.scss'
+import './styles.scss'
 import { StaticImage } from 'gatsby-plugin-image'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import Container from 'components/shared/Container'
@@ -12,10 +12,13 @@ const MenuItem = (props: { pageName: string; to: string }) => (
   </li>
 )
 
+const headerWrapperId = 'header-wrapper'
+const headerWrapperClassName = 'header__wrapper'
+
 const menuBtnClick = () => {
-  const headerWrapper = document.getElementById('header-wrapper')
+  const headerWrapper = document.getElementById(headerWrapperId)
   if (headerWrapper) {
-    headerWrapper.classList.toggle('header__wrapper--active')
+    headerWrapper.classList.toggle(`${headerWrapperClassName}--active`)
   }
 }
 
@@ -25,7 +28,7 @@ export default () => {
   return (
     <header className="header">
       <Container>
-        <div className="header__wrapper" id="header-wrapper">
+        <div className={headerWrapperClassName} id={headerWrapperId}>
           <Link className="logo" to="#">
             <StaticImage
               className="logo__img"
@@ -51,7 +54,7 @@ export default () => {
             </ul>
           </nav>
 
-          <div className="header__phone-wrapper">
+          <div className="header__phone">
             <a className="header__phone-link" href={`tel:${phone}`}>
               <div className="header__phone-number">
                 <svg

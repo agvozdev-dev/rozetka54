@@ -16,11 +16,13 @@ $padding-top-bottom-small: 7px;
   outline-color: $primary-yellow;
 
   &__list {
-    @include font('Roboto', 400);
-    font-size: 16px;
     display: flex;
 
-    @media (max-width: 768px) {
+    @include font('Roboto', 400);
+    font-size: $text-font-size-default;
+
+    //todo работа над анимацией
+    @media (max-width: $md) {
       transform: translateY(-1000px);
       display: none;
     }
@@ -30,7 +32,7 @@ $padding-top-bottom-small: 7px;
     &:not(:last-child) {
       margin-right: 40px;
 
-      @media (max-width: 768px) {
+      @media (max-width: $md) {
         margin-right: 0;
       }
     }
@@ -151,12 +153,12 @@ $padding-top-bottom-small: 7px;
       transform: rotate(-45deg) translate(4px, 3px);
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: $lg) {
       padding-bottom: $padding-top-bottom-small;
     }
   }
 
-  &__phone-wrapper {
+  &__phone {
     display: flex;
     cursor: pointer;
 
@@ -168,14 +170,14 @@ $padding-top-bottom-small: 7px;
       color: $secondary-yellow;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: $lg) {
       display: none;
     }
   }
 
   &__phone-link {
     @include font('Roboto', 700);
-    font-size: 16px;
+    font-size: $text-font-size-default;
     display: block;
     color: $primary-yellow;
     transition: color $delay;
@@ -207,7 +209,7 @@ $padding-top-bottom-small: 7px;
     color: #fff;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: $lg) {
     padding-top: $padding-top-bottom-small;
   }
 }
