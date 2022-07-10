@@ -69,7 +69,7 @@ export default () => {
                 </svg>
                 {phone}
               </div>
-              <span className="header__phone-subtitle">Новосибирск</span>
+              <span className="header__phone-subheading">Новосибирск</span>
             </a>
           </div>
         </div>
