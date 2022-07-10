@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql, useStaticQuery} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
-import LearnMoreButton from "../../shared/buttons/LearnMoreButton";
+import LearnMoreButton from "../buttons/LearnMoreLink";
 import TablePrice from "../../shared/TablePrice";
 import './styles.scss'
 

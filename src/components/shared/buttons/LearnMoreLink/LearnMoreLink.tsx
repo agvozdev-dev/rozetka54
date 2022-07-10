@@ -1,4 +1,4 @@
-import './learn-more-button.scss'
+import './styles.scss'
 import classNames from "classnames";
 import { Link } from 'gatsby'
 

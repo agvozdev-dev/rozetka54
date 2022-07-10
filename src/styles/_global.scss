@@ -98,3 +98,20 @@ body {
     }
 }
 
+.partners {
+  &__bg {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $primary-yellow;
+    padding: 30px;
+  }
+
+  &__item {
+    flex-basis: 20%;
+    margin-bottom: 30px;
+  }
+}

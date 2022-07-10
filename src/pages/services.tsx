@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { graphql, Link } from 'gatsby'
 import Layout from 'components/shared/Layout'
 import PageTitle from "../components/shared/PageTitle";
 import Container from "../components/shared/Container";

@@ -14,7 +14,7 @@ export default () => (
       <AboutUs />
       <PartnerSlider />
       <Prices />
-      <Posts extraClass='posts__bg'/>
+      <Posts />
       <Contacts />
     </Layout>
   </>
