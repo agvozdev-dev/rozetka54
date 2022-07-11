@@ -29,7 +29,8 @@ $padding-top-bottom-small: 7px;
     flex-direction: column;
   }
 
-  &__list .menu__link {
+  &__phone,
+  &__list .mobile-menu__link {
     display: block;
     padding: 15px;
   }
@@ -38,8 +39,8 @@ $padding-top-bottom-small: 7px;
     border-bottom: 1px solid $hover-gray;
   }
 
-  &__phone {
-    display: block;
+  &__link {
+    @include menu-link();
   }
 }
 
@@ -48,9 +49,6 @@ $padding-top-bottom-small: 7px;
 
   &__list {
     display: flex;
-    @include font('Roboto', 400);
-    font-size: $text-font-size-default;
-
     @media (max-width: $md) {
       display: none;
     }
@@ -67,7 +65,7 @@ $padding-top-bottom-small: 7px;
   }
 
   &__link {
-    color: #fff;
+    @include menu-link();
     position: relative;
 
     &::after {

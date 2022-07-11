@@ -31,21 +31,26 @@ const menuItems = [
     to: "/contact"
   }]
 
-const MenuItem = (props: { pageName: string; to: string, extraClass?: string }) => {
-  const className = classNames("menu__item", props.extraClass)
-  return (
-    <li className={className}>
-      <Link className="menu__link" to={props.to}>
-        {props.pageName}
+type MenuItemProps = {
+  pageName: string
+  to: string
+  menuItemClassName: string
+  menuLinkClassName: string
+}
+
+const MenuItem: React.FC<MenuItemProps> = ({pageName, to, menuItemClassName, menuLinkClassName}) => (
+    <li className={menuItemClassName}>
+      <Link className={menuLinkClassName} to={to}>
+        {pageName}
       </Link>
     </li>
   )
-}
 
 const Menu = () => (
   <ul className="menu__list" id="menu-list">
     {menuItems.map(({name, to}, index: number) => (
-      <MenuItem pageName={name} to={to} key={`menu__item-${index}`}/>
+      <MenuItem pageName={name} to={to} menuItemClassName="menu__item" menuLinkClassName="menu__link"
+                key={`menu__item-${index}`}/>
     ))}
   </ul>
 )
@@ -54,7 +59,8 @@ const MobileMenu = () => {
   return (
     <ul className="mobile-menu__list">
       {menuItems.map(({name, to}, index: number) => (
-        <MenuItem pageName={name} to={to} extraClass='mobile-menu__item' key={`menu__item-${index}`}/>
+        <MenuItem pageName={name} to={to} menuItemClassName='mobile-menu__item' menuLinkClassName='mobile-menu__link'
+                  key={`menu__item-${index}`}/>
       ))}
       <PhoneLink extraClass="mobile-menu__phone"/>
     </ul>

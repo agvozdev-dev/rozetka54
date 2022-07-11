@@ -1,3 +1,5 @@
+@import "var";
+
 @mixin font($ff, $fw) {
   font-family: $ff, sans-serif;
   font-weight: $fw;
@@ -37,6 +39,12 @@
     height: 40px;
     line-height: 40px;
   }
+}
+
+@mixin menu-link () {
+  @include font('Roboto', 400);
+  font-size: $text-font-size-default;
+  color: #fff;
 }
 
 @mixin max-width($width) {
