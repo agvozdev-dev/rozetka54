@@ -6,15 +6,14 @@
 }
 
 @mixin button() {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   text-align: center;
-  border-radius: 10px;
+  border-radius: $btn-border-radius;
   @include font('Roboto', 400);
-  font-size: 16px;
+  font-size: $text-font-size-default;
   transition: all $delay;
-  width: 175px;
-  height: 60px;
-  line-height: 60px;
+  padding: 15px;
 
   /// --- portrait
 

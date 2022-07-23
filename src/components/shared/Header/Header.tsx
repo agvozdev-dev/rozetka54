@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './styles.scss'
 import {StaticImage} from 'gatsby-plugin-image'
 import {graphql, Link, useStaticQuery} from 'gatsby'
@@ -39,7 +39,8 @@ type MenuItemProps = {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({pageName, to, menuItemClassName, menuLinkClassName}) => (
-    <li className={menuItemClassName}>
+    <li className={menuItemClassName} onClick={() => {
+      console.log('jhcbsdcjhcjhbsdhbcjhd') }}>
       <Link className={menuLinkClassName} to={to}>
         {pageName}
       </Link>
@@ -57,10 +58,10 @@ const Menu = () => (
 
 const MobileMenu = () => {
   return (
-    <ul className="mobile-menu__list">
+    <ul className="mobile-menu__list" id="mobile-menu-list">
       {menuItems.map(({name, to}, index: number) => (
         <MenuItem pageName={name} to={to} menuItemClassName='mobile-menu__item' menuLinkClassName='mobile-menu__link'
-                  key={`menu__item-${index}`}/>
+                  key={`menu__item-${index}`} />
       ))}
       <PhoneLink extraClass="mobile-menu__phone"/>
     </ul>
@@ -93,8 +94,35 @@ const PhoneLink = (props: { extraClass?: string }) => {
 }
 
 export default () => {
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      const isMobile = window.outerWidth <= 768
+      if (isMobile) {
+        return
+      }
+
+      let menuCheckbox = document.getElementById("menu-checkbox")
+      if (menuCheckbox) {
+        menuCheckbox.checked = false
+      }
+    })
+  });
+
+  const menuBtnClick = () => {
+    let menuCheckbox = document.getElementById("menu-checkbox")
+    let header = document.getElementById("header")
+
+    header.style.position = menuCheckbox && menuCheckbox.checked
+      ? 'fixed'
+      : 'absolute'
+
+    document.body.style.overflow = menuCheckbox && menuCheckbox.checked
+      ? 'hidden'
+      : 'visible'
+  }
+
   return (
-    <header className="header">
+    <header className="header" id='header'>
       <Container>
         <div className="header__wrapper">
           <Link className="logo" to="#">
@@ -109,7 +137,7 @@ export default () => {
           </Link>
 
           <nav className="menu">
-            <input className="menu__checkbox" type="checkbox" name="menu-checkbox" id="menu-checkbox"/>
+            <input className="menu__checkbox" onClick={menuBtnClick} type="checkbox" name="menu-checkbox" id="menu-checkbox"/>
             <ul className="menu__lines">
               <span className="menu__line menu__line-1"></span>
               <span className="menu__line menu__line-2"></span>

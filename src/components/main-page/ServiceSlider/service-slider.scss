@@ -110,14 +110,6 @@
 
     // --- portrait ---
 
-    //@include max-width-portrait($xl) {
-    //  font-size: 24px;
-    //}
-
-    //@include max-width-portrait($lg) {
-    //  font-size: 24px;
-    //}
-
     @include max-width-portrait($md) {
       font-size: 14px;
     }
@@ -132,11 +124,6 @@
     @include max-height-landscape($sm) {
       margin-bottom: 30px;
     }
-
-    //@include max-height-landscape($xs) {
-    //  font-size: 12px;
-    //  margin-bottom: 10px;
-    //}
   }
 
   &__btns-wrapper {
@@ -151,5 +138,21 @@
   &__img {
     max-height: 100vh;
     filter: brightness(70%);
+  }
+
+  &__learn-more-btn {
+    margin-right: 150px;
+
+    @media (max-width: $xl) {
+      margin-right: 75px;
+    }
+
+    @media (max-width: $lg) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: $sm) {
+      margin-right: 30px;
+    }
   }
 }

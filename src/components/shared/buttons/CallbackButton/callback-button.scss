@@ -2,15 +2,7 @@
 @import '../../../../styles/mixins';
 
 .callback-btn {
-  display: block;
-  text-align: center;
-  border-radius: 10px;
-  @include font('Roboto', 400);
-  font-size: 16px;
-  transition: all $delay;
-  max-width: 180px;
-  padding: 20px 10px;
-
+  @include button();
   background-color: $primary-red;
   color: #fff;
 

@@ -3,16 +3,17 @@
 
 .services-and-prices {
   &__item {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
   &__heading {
-    text-align: center;
     margin-bottom: 30px;
   }
 
   &__content {
     display: flex;
+
     margin-bottom: 30px;
 
     @include max-width($lg) {
@@ -38,13 +39,10 @@
     font-size: 16px;
     line-height: 1.5;
     color: $primary-blue;
+    text-align: left;
   }
 
   &__table {
     margin-bottom: 30px;
-  }
-
-  &__learn-more-btn {
-    margin: 0 auto;
   }
 }

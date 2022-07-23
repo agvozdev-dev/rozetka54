@@ -14,11 +14,10 @@ $padding-top-bottom-small: 7px;
 
 .mobile-menu {
   &__list {
-    transition: transform 0.5s;
-    transform: translateX(150%);
+    transition: left 0.5s;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 150%;
     right: 0;
     bottom: 0;
     background-color: $primary-gray;
@@ -27,6 +26,7 @@ $padding-top-bottom-small: 7px;
     padding-top: 80px;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
   }
 
   &__phone,
@@ -37,6 +37,10 @@ $padding-top-bottom-small: 7px;
 
   &__item {
     border-bottom: 1px solid $hover-gray;
+
+    &:hover {
+      background-color: $secondary-gray;
+    }
   }
 
   &__link {
@@ -96,7 +100,8 @@ $padding-top-bottom-small: 7px;
     z-index: 4;
     opacity: 0;
     cursor: pointer;
-    @media (max-width: 768px) {
+
+    @media (max-width: $md) {
       display: block;
     }
   }
@@ -142,7 +147,8 @@ $padding-top-bottom-small: 7px;
 }
 
 input[type="checkbox"]:checked ~ .mobile-menu__list {
-  transform: translateX(0);
+  left: 0;
+  position: fixed;
 }
 
 input[type="checkbox"]:checked ~ .menu__lines .menu__line-1 {
@@ -157,7 +163,9 @@ input[type="checkbox"]:checked ~ .menu__lines .menu__line-3 {
   transform: rotate(-45deg);
 }
 
-
+.menu__checkbox[style="display: none"] ~ .mobile-menu__list {
+  left: 150% !important;
+}
 
 .phone {
   display: flex;

@@ -25,7 +25,7 @@ const ServicesAndPrices = () => {
                   </p>
                 </div>
                 <TablePrice prices={edge.node.frontmatter.prices} tableExtraClass="services-and-prices__table"/>
-                <LearnMoreButton to={`/service/${edge.node.slug}`} extraClass="services-and-prices__learn-more-btn" />
+                <LearnMoreButton to={`/service/${edge.node.slug}`} />
               </li>
             )
           })}
