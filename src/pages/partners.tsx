@@ -15,16 +15,18 @@ const PartnersPage = () => {
     <Layout pageTitle="Блог">
       <section className="partners partners__bg">
         <PageTitle text="Партнеры"/>
-        <p className="partners__text">
-          Наша компания работает с представленными брендами.
-          На все товары предоставляется гарантия. Цены от производителя.
-        </p>
+        <Container>
+          <p className="partners__text">
+            Наша компания работает с представленными брендами.
+            На все товары предоставляется гарантия. Цены от производителя.
+          </p>
+        </Container>
         <div className="partners__logos">
           <Container>
             <ul className="partners__list">
-              {edges.map((edge: any) => {
+              {edges.map((edge: any, index: number) => {
                 return (
-                  <li className="partners__item">
+                  <li className="partners__item" key={`partners__item-${index}`}>
                     <GatsbyImage alt='Логотип партнера' image={getImage(edge.node)}/>
                   </li>
                 )

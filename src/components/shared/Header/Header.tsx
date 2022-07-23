@@ -39,8 +39,7 @@ type MenuItemProps = {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({pageName, to, menuItemClassName, menuLinkClassName}) => (
-    <li className={menuItemClassName} onClick={() => {
-      console.log('jhcbsdcjhcjhbsdhbcjhd') }}>
+    <li className={menuItemClassName}>
       <Link className={menuLinkClassName} to={to}>
         {pageName}
       </Link>
@@ -96,6 +95,7 @@ const PhoneLink = (props: { extraClass?: string }) => {
 export default () => {
   useEffect(() => {
     window.addEventListener("resize", () => {
+      console.log('resize')
       const isMobile = window.outerWidth <= 768
       if (isMobile) {
         return
@@ -116,9 +116,9 @@ export default () => {
       ? 'fixed'
       : 'absolute'
 
-    document.body.style.overflow = menuCheckbox && menuCheckbox.checked
-      ? 'hidden'
-      : 'visible'
+    // document.body.style.overflow = menuCheckbox && menuCheckbox.checked
+    //   ? 'hidden'
+    //   : 'visible'
   }
 
   return (
