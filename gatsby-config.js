@@ -1,5 +1,5 @@
 module.exports = {
-  //pathPrefix: 'rozetka54-demo',
+  pathPrefix: 'rozetka54-demo',
   siteMetadata: {
     title: 'Rozetka 54',
     description:
@@ -33,6 +33,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `gallery`,
+        path: `${__dirname}/content/gallery`,
       },
     },
     {

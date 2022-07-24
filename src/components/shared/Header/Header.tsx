@@ -95,7 +95,6 @@ const PhoneLink = (props: { extraClass?: string }) => {
 export default () => {
   useEffect(() => {
     window.addEventListener("resize", () => {
-      console.log('resize')
       const isMobile = window.outerWidth <= 768
       if (isMobile) {
         return
