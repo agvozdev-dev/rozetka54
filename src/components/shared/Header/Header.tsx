@@ -12,7 +12,7 @@ const menuItems = [
   },
   {
     name: "О нас",
-    to: "/"
+    to: "/#about-us"
   },
   {
     name: "Услуги и цены",
@@ -28,7 +28,7 @@ const menuItems = [
   },
   {
     name: "Контакты",
-    to: "/contact"
+    to: "#contacts"
   }]
 
 type MenuItemProps = {

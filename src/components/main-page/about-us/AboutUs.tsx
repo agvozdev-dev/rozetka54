@@ -66,7 +66,7 @@ const cards: Card[] = [
 
 export default () => {
   return (
-    <section className="about-us">
+    <section className="about-us" id="about-us">
       <Container>
         <Title
           title="Почему обращаются к нам"
