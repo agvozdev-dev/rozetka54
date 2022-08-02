@@ -27,60 +27,115 @@ a[data-fancybox] img {
   --fancybox-opacity: 1;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  &__description {
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.card {
+  width: 30.3333333333%;
+  margin: 1%;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  transition: .3s all;
+  box-shadow: 0 2px 5px 0 rgba(3,6,26,0.15);
+  &:hover {
+    transform: scale(1.05);
   }
+  @media screen and (max-width: 1240px) {
+    width: 48%;
+  }
+  @media screen and (max-width: 820px) {
+    width: 98%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 60px;
+  }
+}
 
-  &__facility {
-    border-radius: 20px;
-    background-color: $secondary-gray;
-    margin: 30px;
+.button {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-size: 14px;
+  color: white;
+  background: rgba(0,0,0,.2);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10000px;
+  transition: .3s all;
+  &:hover {
+    background: rgba(255,255,255,.8);
+    color: #2e2e2e;
+  }
+}
+
+.gallery {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__item {
+    border-radius: 20px;
+    background-color: $secondary-gray;
+    margin: 15px;
     max-width: 300px;
+  }
+
+  &__description {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
     max-height: 170px;
     cursor: pointer;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
 
-  &__item-wrapper {
-    max-width: 300px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+
     &--hidden {
       display: none;
     }
   }
 
-  &__item-title,
-  &__item-text{
+  &__title,
+  &__text,
+  &__date {
     @include font('Roboto', 400);
     line-height: 1.5;
+  }
+
+  &__title,
+  &__text {
     margin-bottom: 15px;
   }
 
-  &__item-title {
+  &__title {
     border-bottom: 1px solid gray;
     padding-bottom: 5px;
-    display: block;
   }
 
-  &__item-text {
-    display: block;
-    height: 100%;
+  &__text {
     color: $primary-blue;
   }
 
-  &__item-date {
-    display: block;
+  &__date {
+    font-size: 14px;
+    //position: absolute;
+    //left: 30px;
+    //bottom: 0px;
   }
 }
 

@@ -13,7 +13,7 @@ import Contacts from "components/shared/Contacts";
 // @ts-ignore
 const ServicePage = ({data}) => {
   const image = getImage(data.mdx.frontmatter.image)
-  const {title, subtitle, intro, keywords, text, points} = data.mdx.frontmatter
+  const {title, subtitle, intro, keywords, paragraphs, points} = data.mdx.frontmatter
   const icon = getImage(data.icon)
 
   return (
@@ -38,9 +38,11 @@ const ServicePage = ({data}) => {
         </section>
         <section className="service__wrapper">
           <Container>
-            <p className="service__text">
-              {text}
-            </p>
+            {paragraphs.map((text: string, index: number) => (
+              <p className="service__text" key={`service__text-${index}`}>
+                {text}
+              </p>
+            ))}
             <ul className="service__list">
               {points.map((point: any, index: number) => {
                 return (
@@ -73,8 +75,9 @@ const ServicePage = ({data}) => {
 
           </Container>
         </section>
+        <Contacts extraClass='service__contacts'/>
       </main>
-      <Contacts/>
+
     </Layout>
   )
 }
@@ -91,7 +94,7 @@ export const query = graphql`
         title
         subtitle
         intro
-        text
+        paragraphs
         keywords
         image_alt
         image {

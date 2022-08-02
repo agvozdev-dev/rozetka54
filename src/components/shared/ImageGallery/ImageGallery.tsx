@@ -40,50 +40,49 @@ const ImageGallery = () => {
   }
 
   return (
+    <div className="gallery">
+      <Container>
+        <ul className='gallery__list'>
+          {edges.map((edge: any, edgeIndex: number) => (
+              <li className='gallery__item' key={`gallery__item-${edgeIndex}`}>
+                <Fancybox options={options}>
+                  {edge.node.frontmatter.images.map((image: any, imageIndex: number) => {
+                    const hidden = imageIndex !== 0 ? "gallery__content--hidden" : ""
+                    const classes = classNames("gallery__content", hidden)
+                    return (
+                      <div className={classes}>
+                        <GatsbyImage className="gallery__image rounded"
+                                     key={`gallery__image-${imageIndex}`}
+                                     alt={edge.node.frontmatter.image_alt}
+                                     image={getImage(image)}
+                                     data-fancybox={`gallery-${edgeIndex}`}/>
+                        <div className='gallery__description'>
+                          <HighlighterText
+                            className="gallery__title"
+                            text={`Объект: ${edge.node.frontmatter.facility}`}
+                            searchWords={[edge.node.frontmatter.facility]}
+                          />
 
-    <Container>
-      <ul className='gallery'>
-        {edges.map((edge: any, edgeIndex: number) => {
-          return (
-            <li className='gallery__facility' key={`gallery__facility-${edgeIndex}`}>
-              <Fancybox options={options}>
-                {edge.node.frontmatter.images.map((image: any, imageIndex: number) => {
-                  const hidden = imageIndex !== 0 ? "gallery__item-wrapper--hidden" : ""
-                  const classes = classNames("gallery__item-wrapper", hidden)
-                  const data = edge.node.frontmatter
-
-                  return (
-                    <div className={classes}>
-                      <GatsbyImage className="gallery__item rounded"
-                                   key={`gallery__image-${imageIndex}`}
-                                   alt={data.image_alt}
-                                   image={getImage(image)}
-                                   data-fancybox={`gallery-${edgeIndex}`}/>
-                      <div className='gallery__description'>
-                        <HighlighterText
-                          className="gallery__item-title"
-                          text={`Объект: ${data.facility}`}
-                          searchWords={[data.facility]}
-                        />
-
-                        <p className='gallery__item-text'>
-                          {data.description}
-                        </p>
-                        <HighlighterText
-                          className="gallery__item-date"
-                          text={`Объект сдан: ${data.date}`}
-                          searchWords={[data.date]}
-                        />
+                          <p className='gallery__text'>
+                            {edge.node.frontmatter.description}
+                          </p>
+                          <HighlighterText
+                            className="gallery__date"
+                            text={`Объект сдан: ${edge.node.frontmatter.date}`}
+                            searchWords={[edge.node.frontmatter.date]}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )
-                })}
-              </Fancybox>
-            </li>
-          )
-        })}
-      </ul>
-    </Container>
+                    )
+                  })}
+                </Fancybox>
+              </li>
+            )
+          )}
+        </ul>
+      </Container>
+    </div>
+
   )
 }
 
