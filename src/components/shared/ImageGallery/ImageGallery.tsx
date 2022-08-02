@@ -7,6 +7,7 @@ import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import classNames from "classnames";
 import Container from "/components/shared/Container";
 import HighlighterText from "/components/shared/HighlighterText";
+import Title from "/components/shared/Title";
 
 type ImageGalleryProps = {}
 
@@ -40,8 +41,13 @@ const ImageGallery = () => {
   }
 
   return (
-    <div className="gallery">
+    <section className="gallery">
       <Container>
+        <Title
+          title="Примеры наших работ"
+          subtitle="Работаем на результат"
+          titleSearchWords={['работ']}
+        />
         <ul className='gallery__list'>
           {edges.map((edge: any, edgeIndex: number) => (
               <li className='gallery__item' key={`gallery__item-${edgeIndex}`}>
@@ -81,7 +87,7 @@ const ImageGallery = () => {
           )}
         </ul>
       </Container>
-    </div>
+    </section>
 
   )
 }

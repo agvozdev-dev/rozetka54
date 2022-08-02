@@ -1,7 +1,6 @@
 import Layout from 'components/shared/Layout'
 import * as React from 'react'
 import {graphql} from 'gatsby'
-import {MDXRenderer} from 'gatsby-plugin-mdx'
 import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import './styles.scss'
 import CallButton from 'components/shared/buttons/CallButton'
@@ -9,6 +8,7 @@ import Container from 'components/shared/Container'
 import HighlighterText from "components/shared/HighlighterText";
 import TextPoint from "../../src/components/shared/TextPoint";
 import Contacts from "components/shared/Contacts";
+import ImageGallery from "components/shared/ImageGallery";
 
 // @ts-ignore
 const ServicePage = ({data}) => {
@@ -68,14 +68,15 @@ const ServicePage = ({data}) => {
                       })}
                     </ul>
                   </li>
-
                 )
               })}
             </ul>
-
           </Container>
         </section>
-        <Contacts extraClass='service__contacts'/>
+        <section className='service__gallery'>
+          <ImageGallery />
+        </section>
+        <Contacts/>
       </main>
 
     </Layout>
