@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import './styles.scss'
 import {StaticImage} from 'gatsby-plugin-image'
-import {graphql, Link, useStaticQuery} from 'gatsby'
+import {graphql, Link, useStaticQuery, withPrefix} from 'gatsby'
 import Container from 'components/shared/Container'
 import classNames from "classnames";
 
@@ -39,7 +39,7 @@ type MenuItemProps = {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({pageName, to, menuItemClassName, menuLinkClassName}) => (
-    <li className={menuItemClassName}>
+    <li className={menuItemClassName} onClick={onMobileMenuItemClick}>
       <Link className={menuLinkClassName} to={to}>
         {pageName}
       </Link>
@@ -54,6 +54,13 @@ const Menu = () => (
     ))}
   </ul>
 )
+
+const onMobileMenuItemClick = () => {
+  let menuCheckbox: any = document.getElementById("menu-checkbox")
+  if (menuCheckbox) {
+    menuCheckbox.checked = false
+  }
+}
 
 const MobileMenu = () => {
   return (
