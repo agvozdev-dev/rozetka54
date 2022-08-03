@@ -189,12 +189,6 @@ input[type="checkbox"]:checked ~ .menu__lines .menu__line-3 {
     fill: $secondary-yellow;
   }
 
-  &__icon {
-    margin-right: 10px;
-    transition: fill $delay;
-    vertical-align: bottom;
-  }
-
   &__number {
     margin-bottom: 10px;
   }

@@ -125,3 +125,11 @@ body {
     padding: 20px;
   }
 }
+
+.mail__icon,
+.place__icon,
+.phone__icon {
+  margin-right: 10px;
+  transition: fill $delay;
+  vertical-align: bottom;
+}
