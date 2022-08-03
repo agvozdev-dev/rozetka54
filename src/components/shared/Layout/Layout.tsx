@@ -2,6 +2,7 @@ import Header from 'components/shared/Header'
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import {Helmet} from "react-helmet";
+import Footer from 'components/shared/Footer'
 
 type LayoutProps = {
   pageTitle: string
@@ -28,6 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
       </Helmet>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import './styles.scss'
 import {StaticImage} from 'gatsby-plugin-image'
-import {graphql, Link, useStaticQuery, withPrefix} from 'gatsby'
+import {graphql, Link, useStaticQuery} from 'gatsby'
 import Container from 'components/shared/Container'
 import classNames from "classnames";
 
