@@ -9,10 +9,10 @@ type CallButtonProps = {
 
 const CallButton: React.FC<CallButtonProps> = ({extraClass}) => {
     const classes = classNames("call-btn", extraClass)
-    const { phone } = useStaticQuery(query).contentJson.contacts
+    const { format_phone } = useStaticQuery(query).contentJson.contacts
 
     return (
-        <a className={classes} href={`tel:${phone}`}>
+        <a className={classes} href={`tel:${format_phone}`}>
             Позвонить
         </a>
     )
@@ -24,7 +24,7 @@ export const query = graphql`
   {
     contentJson {
       contacts {
-        phone
+        format_phone
       }
     }
   }

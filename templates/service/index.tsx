@@ -1,6 +1,5 @@
 import Layout from 'components/shared/Layout'
 import * as React from 'react'
-import {graphql} from 'gatsby'
 import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import './styles.scss'
 import CallButton from 'components/shared/buttons/CallButton'
@@ -82,46 +81,5 @@ const ServicePage = ({data}) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  query ServiceBySlug($slug: String!) {
-    mdx(
-        fields: { slug: { eq: $slug } }
-        frontmatter: { type: { eq: "service" } }
-    ) {   
-      body
-      slug
-      frontmatter {
-        title
-        subtitle
-        intro
-        paragraphs
-        keywords
-        image_alt
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        points {
-            title
-            subtitle
-            number
-            points
-        }
-      }
-    }
-    contentJson {
-        contacts {
-            phone
-        }
-    }
-    icon: file(name: {eq: "service-point"}) {
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
-  }
-`
 
 export default ServicePage

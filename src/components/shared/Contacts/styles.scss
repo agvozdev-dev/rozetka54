@@ -75,4 +75,12 @@
     font-size: 16px;
     color: $primary-yellow;
   }
+
+  &__social-link {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
 }
