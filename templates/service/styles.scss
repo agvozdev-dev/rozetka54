@@ -68,7 +68,7 @@
 
   &__wrapper {
     padding-top: 30px;
-    //background-color: $primary-gray; конфликт
+    background-color: $primary-gray;
   }
 
   &__text {
@@ -152,9 +152,5 @@
     @include max-width($sm) {
       margin: 0 auto;
     }
-  }
-  
-  &__gallery {
-    background-color: $primary-gray;
   }
 }

@@ -16,7 +16,7 @@ const Services = () => {
           </Container>
         <div className="services__wrapper">
           <Container>
-            <Contacts extraClass={'services__contacts'} />
+            <Contacts />
           </Container>
         </div>
       </section>

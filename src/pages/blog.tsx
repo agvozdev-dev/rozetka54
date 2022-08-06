@@ -14,11 +14,7 @@ const BlogPage = () => {
         <Container>
           <PostsItems />
         </Container>
-        <div className="services__wrapper">
-          <Container>
-            <Contacts extraClass={'blog__contacts'} />
-          </Container>
-        </div>
+        <Contacts />
       </section>
     </Layout>
   )

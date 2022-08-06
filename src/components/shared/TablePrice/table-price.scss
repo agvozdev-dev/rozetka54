@@ -2,6 +2,8 @@
 @import '../../../styles/mixins';
 
 .table-price {
+  @include font('Roboto', 400);
+
   &__head,
   &__row {
     display: flex;

@@ -94,9 +94,15 @@ body {
 }
 
 .services {
-    &__wrapper {
-      background-color: $primary-gray;
-    }
+  &__wrapper {
+    background-color: $primary-gray;
+  }
+}
+
+.blog {
+  &__contacts-wrapper {
+    background-color: $primary-gray;
+  }
 }
 
 .partners {

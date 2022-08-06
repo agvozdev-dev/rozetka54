@@ -35,11 +35,7 @@ const PartnersPage = () => {
             </ul>
           </Container>
         </div>
-        <div className="partners__wrapper">
-          <Container>
-            <Contacts extraClass={'partners__contacts'}/>
-          </Container>
-        </div>
+        <Contacts />
       </section>
     </Layout>
   )

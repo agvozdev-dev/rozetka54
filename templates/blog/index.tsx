@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import './styles.scss'
 import Container from 'components/shared/Container'
 import PageTitle from "../../src/components/shared/PageTitle";
+import Contacts from "../../src/components/shared/Contacts";
 
 // @ts-ignore
 const BlogPage = ({ data }) => {
@@ -28,6 +29,7 @@ const BlogPage = ({ data }) => {
           <MDXRenderer className="re">{data.mdx.body}</MDXRenderer>
         </Container>
       </article>
+      <Contacts />
     </Layout>
   )
 }
