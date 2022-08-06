@@ -17,11 +17,10 @@ $padding-top-bottom-small: 7px;
     transition: left 0.5s;
     position: absolute;
     top: 0;
-    left: 150%;
+    left: 300%;
     right: 0;
     bottom: 0;
     background-color: $primary-gray;
-    width: 100vw;
     height: 100vh;
     text-align: center;
     padding-top: 80px;
@@ -148,6 +147,7 @@ $padding-top-bottom-small: 7px;
 }
 
 input[type="checkbox"]:checked ~ .mobile-menu__list {
+  width: 100vw;
   left: 0;
   position: fixed;
 }
@@ -165,7 +165,7 @@ input[type="checkbox"]:checked ~ .menu__lines .menu__line-3 {
 }
 
 .menu__checkbox[style="display: none"] ~ .mobile-menu__list {
-  left: 150% !important;
+  left: 300% !important;
 }
 
 .phone {

@@ -14,30 +14,6 @@
   font-size: $text-font-size-default;
   transition: all $delay;
   padding: 15px;
-
-  /// --- portrait
-
-  @include max-width-portrait($lg) {
-    width: 150px;
-    height: 65px;
-    line-height: 65px;
-  }
-
-  @include max-width-portrait($md) {
-    font-size: 12px;
-    width: 120px;
-    height: 45px;
-    line-height: 45px;
-  }
-
-  // --- landscape ---
-
-  @include max-height-landscape($sm) {
-    font-size: 11px;
-    width: 110px;
-    height: 40px;
-    line-height: 40px;
-  }
 }
 
 @mixin menu-link () {
