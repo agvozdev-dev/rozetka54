@@ -23,8 +23,10 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-between;
+  height: 100vh;
 }
+
 .content {
   flex: 1 0 auto;
 }
@@ -151,4 +153,31 @@ body {
   margin-right: 10px;
   transition: fill $delay;
   vertical-align: bottom;
+}
+
+.not-found {
+  padding-top: 180px;
+  text-align: center;
+
+  &__code {
+    @include font('Roboto', 700);
+    font-size: 10em;
+    color: $primary-yellow;
+
+    @media (max-width: $sm) {
+      font-size: 3em;
+    }
+  }
+
+  &__description {
+    @include font('Roboto', 400);
+    font-size: 36px;
+    color: $primary-blue;
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+  }
+
+
 }

@@ -4,6 +4,7 @@
 .footer {
   @include font('Roboto', 400);
   font-size: $text-font-size-default;
+  margin-top: auto;
 
   &__top {
     padding-top: 30px;

@@ -131,7 +131,7 @@ export default () => {
     <header className="header" id='header'>
       <Container>
         <div className="header__wrapper">
-          <Link className="logo" to="#">
+          <Link className="logo" to="/">
             <StaticImage
               className="logo__img"
               loading="eager"

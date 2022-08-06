@@ -33,9 +33,11 @@ const Layout: React.FC<LayoutProps> = ({pageTitle, children}) => {
         <meta name="robots" content="all" />
         <meta name="keywords" content={data.site.siteMetadata.keywords} />
       </Helmet>
-      <Header/>
-      <main>{children}</main>
-      <Footer/>
+      <div className="wrapper">
+        <Header/>
+        <main>{children}</main>
+        <Footer/>
+      </div>
     </>
   )
 }

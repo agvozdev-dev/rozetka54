@@ -9,7 +9,14 @@ import Contacts from "../components/shared/Contacts";
 
 const NotFound = () => (
   <Layout pageTitle="404 Страница не существует">
-      404 Страница не существует
+      <div className="not-found">
+        <div className="not-found__code">
+          404
+        </div>
+        <div className="not-found__description">
+          Страница не существует
+        </div>
+      </div>
   </Layout>
 )
 
