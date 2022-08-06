@@ -4,7 +4,7 @@ module.exports = {
     title: 'Rozetka 54',
     description: 'Электромонтаж под ключ, установка видеонаблюдения, подключение интернета. Фиксированная цена. Сюблюдение сроков. Порядок на объекте',
     keywords: '"Электромонтаж, видеонаблюдение, интернет, розетка 54, розетка54, rozetka54, rozetka 54',
-    url: 'https://www.rozetka54.ru',
+    siteUrl: 'https://www.rozetka54.ru',
     image: '/static/images/logo/logo.png',
   },
   plugins: [
@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
