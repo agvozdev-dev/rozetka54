@@ -21,9 +21,9 @@ const PostsItems = () => {
 
             <div className="posts__content">
               <div className="posts__content-wrapper">
-                <Link className="posts__link posts__title-link" to={to}>
-                  <p className="posts__title">{node.frontmatter.title}</p>
-                </Link>
+                  <Link className="posts__link posts__title-link" to={to}>
+                    <h2 className="posts__title">{node.frontmatter.title}</h2>
+                  </Link>
 
                 <p className="posts__introduction">
                   {node.frontmatter.introduction}

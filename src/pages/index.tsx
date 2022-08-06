@@ -10,6 +10,7 @@ import Contacts from "components/shared/Contacts";
 export default () => (
   <>
     <Layout pageTitle="Электромонтаж, видеонаблюдение, интернет">
+      <h1 className="sr-only">Электромонтажные работы, видеонаблюдение, интернет в Новосибирске</h1>
       <MainScreen />
       <AboutUs />
       <PartnerSlider />

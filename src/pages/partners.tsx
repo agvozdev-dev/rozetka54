@@ -13,6 +13,7 @@ const PartnersPage = () => {
 
   return (
     <Layout pageTitle="Блог">
+      <h1 className="sr-only">Электромонтажные работы, видеонаблюдение, интернет в Новосибирске. Партнеры</h1>
       <section className="partners partners__bg">
         <PageTitle text="Партнеры"/>
         <Container>

@@ -8,6 +8,7 @@ import HighlighterText from "components/shared/HighlighterText";
 import TextPoint from "../../src/components/shared/TextPoint";
 import Contacts from "components/shared/Contacts";
 import ImageGallery from "components/shared/ImageGallery";
+import {graphql} from "gatsby";
 
 // @ts-ignore
 const ServicePage = ({data}) => {
@@ -25,7 +26,7 @@ const ServicePage = ({data}) => {
         />
         <section className='service__substrate'>
           <Container>
-            <h2 className="service__heading">{title}</h2>
+            <h1 className="service__heading">{title}</h1>
             <p className="service__subtitle">{subtitle}</p>
             <p className="service__description">
               <HighlighterText text={intro} searchWords={keywords}/>
@@ -81,5 +82,46 @@ const ServicePage = ({data}) => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query ServiceBySlug($slug: String!) {
+    mdx(
+        fields: { slug: { eq: $slug } }
+        frontmatter: { type: { eq: "service" } }
+    ) {   
+      body
+      slug
+      frontmatter {
+        title
+        subtitle
+        intro
+        paragraphs
+        keywords
+        image_alt
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        points {
+            title
+            subtitle
+            number
+            points
+        }
+      }
+    }
+    contentJson {
+        contacts {
+            phone
+        }
+    }
+    icon: file(name: {eq: "service-point"}) {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+  }
+`
 
 export default ServicePage

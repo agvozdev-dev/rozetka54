@@ -9,6 +9,7 @@ import Contacts from "../components/shared/Contacts";
 const Services = () => {
   return (
     <Layout pageTitle="Услуги и цены">
+      <h1 className="sr-only">Электромонтажные работы, видеонаблюдение, интернет в Новосибирске. Услуги и цены</h1>
       <section className="services">
         <PageTitle text="Услуги и цены" />
           <Container>

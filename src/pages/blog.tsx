@@ -9,6 +9,7 @@ import PostsItems from "../components/shared/PostsItems";
 const BlogPage = () => {
   return (
     <Layout pageTitle="Блог">
+      <h1 className="sr-only">Электромонтажные работы, видеонаблюдение, интернет в Новосибирске. Блог</h1>
       <section className="blog">
         <PageTitle text="Блог" />
         <Container>
