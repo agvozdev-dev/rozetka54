@@ -5,10 +5,42 @@
   @include font('Roboto', 400);
   font-size: $text-font-size-default;
 
+  &__top {
+    border-bottom: 1px solid $primary-gray;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include font('Roboto', 400);
+
+    @include max-width($md) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px 0;
+    }
+  }
+
+  &__developer {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    color: $primary-blue;
+
+    @include max-width($md) {
+      padding-top: 15px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
   &__row {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    margin-bottom: 10px;
 
     @include max-width($lg) {
       justify-content: space-between;
