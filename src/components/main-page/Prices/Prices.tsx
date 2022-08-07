@@ -4,7 +4,11 @@ import React from 'react'
 import ServicesAndPrices from "../../shared/ServicesAndPrices";
 import './styles.scss'
 
-const Prices = () => {
+type PricesProps = {
+  top?: number
+}
+
+const Prices: React.FC<PricesProps> = ({top}) => {
   return (
     <section className="prices" id="#prices">
       <Title
@@ -13,7 +17,7 @@ const Prices = () => {
         titleSearchWords={['Услуги']}
       />
       <Container>
-        <ServicesAndPrices />
+        <ServicesAndPrices top={top} />
       </Container>
     </section>
   )

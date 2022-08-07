@@ -14,7 +14,7 @@ export default () => (
       <MainScreen />
       <AboutUs />
       <PartnerSlider />
-      <Prices />
+      <Prices top={5}/>
       <Posts />
       <Contacts />
     </Layout>

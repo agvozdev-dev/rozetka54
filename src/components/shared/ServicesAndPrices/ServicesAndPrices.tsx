@@ -5,7 +5,11 @@ import LearnMoreButton from "../buttons/LearnMoreLink";
 import TablePrice from "../../shared/TablePrice";
 import './styles.scss'
 
-const ServicesAndPrices = () => {
+type ServicesAndPricesProps = {
+  top?: number
+}
+
+const ServicesAndPrices: React.FC<ServicesAndPricesProps> = ({ top }) => {
   const { allMdx } = useStaticQuery(query)
 
   return (
@@ -24,7 +28,7 @@ const ServicesAndPrices = () => {
                     {edge.node.frontmatter.text}
                   </p>
                 </div>
-                <TablePrice prices={edge.node.frontmatter.prices} tableExtraClass="services-and-prices__table"/>
+                <TablePrice prices={edge.node.frontmatter.prices} top={top} tableExtraClass="services-and-prices__table"/>
                 <LearnMoreButton to={`/service/${edge.node.slug}`} />
               </li>
             )
