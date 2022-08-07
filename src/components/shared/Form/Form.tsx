@@ -33,11 +33,11 @@ const Form = () => {
     })
 
     if (response.ok) {
-      alert("Сообщение успешно отправлено")
+      alert("Сообщение отправлено")
       form.reset()
       form.classList.remove("_sending")
     } else {
-      alert("При отправке формы произошла ошибка")
+      alert("Произошла ошибка")
       form.classList.remove("_sending")
     }
   }
