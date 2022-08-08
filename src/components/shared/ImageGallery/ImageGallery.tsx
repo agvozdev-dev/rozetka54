@@ -44,9 +44,9 @@ const ImageGallery = () => {
     <section className="gallery">
       <Container>
         <Title
-          title="Примеры наших работ"
+          title="Наши последние работы"
           subtitle="Работаем на результат"
-          titleSearchWords={['работ']}
+          titleSearchWords={['работы']}
         />
         <ul className='gallery__list'>
           {edges.map((edge: any, edgeIndex: number) => (
