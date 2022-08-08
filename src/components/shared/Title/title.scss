@@ -44,24 +44,15 @@
   margin-bottom: 30px;
   display: inline-block;
   padding-bottom: 10px;
-  border-bottom: 1px solid $underline_gray;
   position: relative;
 
   &::before {
     content: '';
-    width: 70px;
+    width: 100%;
     position: absolute;
-    border-bottom: 4px solid $primary-yellow;
+    border-bottom: 2px solid $primary-yellow;
     bottom: 0;
     left: 0;
-
-    @include max-width($xl) {
-      width: 50px;
-    }
-
-    @include max-width($lg) {
-      width: 40px;
-    }
   }
 
   @include max-width($xl) {
