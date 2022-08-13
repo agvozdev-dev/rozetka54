@@ -15,7 +15,11 @@
 
   &__head-cell {
     color: $primary-gray;
-    background-color: $primary-yellow;
+    border: 1px solid $primary-yellow !important;
+
+    @include font('Roboto', 700);
+    text-transform: uppercase;
+    color: $primary-yellow;
   }
 
   &__row {
@@ -27,13 +31,13 @@
   }
 
   &__body-cell {
-    &:nth-child(even) {
-      color: $primary-yellow;
-    }
-
     @include max-width($md) {
       &:nth-child(even) {
         padding-top: 0;
+      }
+
+      &:nth-child(even) {
+        color: $primary-yellow;
       }
     }
   }

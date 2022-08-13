@@ -52,7 +52,7 @@ const Contacts: React.FC<Contacts> = ({extraClass}) => {
 
             <div className="contacts__item">
               <span className="contacts__label">ИП:</span>
-              <span className="contacts__name">Бортников Адрей Александрович</span>
+              <span className="contacts__name">Бортников Андрей Александрович</span>
             </div>
             <div className="contacts__item">
               <span className="contacts__label">ОГРНИП:</span>
