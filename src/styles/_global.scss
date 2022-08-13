@@ -189,3 +189,25 @@ body {
     line-height: 1.5;
   }
 }
+
+a[data-fancybox] img {
+  cursor: zoom-in;
+}
+
+.fancybox__container {
+  --fancybox-bg: rgba(17, 6, 25, 0.85);
+}
+
+.fancybox__container .fancybox__content {
+  box-sizing: content-box;
+  padding: 1rem;
+  background: #fff;
+
+  border-radius: 6px;
+  color: #374151;
+}
+
+.fancybox__caption {
+  max-width: 80%;
+  --fancybox-opacity: 1;
+}

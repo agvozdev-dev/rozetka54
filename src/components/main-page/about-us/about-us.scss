@@ -144,4 +144,22 @@
     //margin: 0 auto;
     margin-bottom: 30px;
   }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  &__gallery-item {
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  &__gallery-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+  }
 }
