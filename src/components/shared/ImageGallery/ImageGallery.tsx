@@ -9,8 +9,6 @@ import Container from "/components/shared/Container";
 import HighlighterText from "/components/shared/HighlighterText";
 import Title from "/components/shared/Title";
 
-type ImageGalleryProps = {}
-
 function Fancybox(props: any) {
   const delegate = props.delegate || "[data-fancybox]";
 
@@ -27,8 +25,12 @@ function Fancybox(props: any) {
   return <>{props.children}</>;
 }
 
-const ImageGallery = () => {
-  const edges = useStaticQuery(query).allMdx.edges
+const ImageGallery = ({ page }) => {
+  let edges = useStaticQuery(all).allMdx.edges
+  debugger
+  if (page) {
+    edges = edges.filter((edge: any) => edge.node.frontmatter.for_page === page)
+  }
 
   const options = {
     Thumbs: false,
@@ -92,9 +94,14 @@ const ImageGallery = () => {
   )
 }
 
-export const query = graphql`
+export const all = graphql`
 query GalleryBySlug {
-  allMdx(filter: {frontmatter: {type: {eq: "examples-of-work"}}}) {
+  allMdx(filter: {frontmatter: {type: {eq: "examples-of-work"}}}
+  sort: {
+          fields: [frontmatter___sort]
+          order: DESC
+        }
+  ) {
     edges {
       node {
         frontmatter {
@@ -102,6 +109,7 @@ query GalleryBySlug {
           description
           facility
           image_alt
+          for_page
           images {
             childImageSharp {
               gatsbyImageData

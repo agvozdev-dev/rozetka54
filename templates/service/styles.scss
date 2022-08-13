@@ -153,4 +153,20 @@
       margin: 0 auto;
     }
   }
+
+  &__gallery {
+    text-align: center;
+  }
+
+  &__gallery-link {
+    @include button();
+
+    background-color: $primary-red;
+    color: #fff;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: $secondary-red;
+    }
+  }
 }

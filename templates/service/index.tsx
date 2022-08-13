@@ -8,12 +8,12 @@ import HighlighterText from "components/shared/HighlighterText";
 import TextPoint from "../../src/components/shared/TextPoint";
 import Contacts from "components/shared/Contacts";
 import ImageGallery from "components/shared/ImageGallery";
-import {graphql} from "gatsby";
+import {graphql, Link} from "gatsby";
 
 // @ts-ignore
 const ServicePage = ({data}) => {
   const image = getImage(data.mdx.frontmatter.image)
-  const {title, subtitle, intro, keywords, paragraphs, points} = data.mdx.frontmatter
+  const {title, subtitle, intro, keywords, paragraphs, points, service_name} = data.mdx.frontmatter
   const icon = getImage(data.icon)
 
   return (
@@ -74,7 +74,8 @@ const ServicePage = ({data}) => {
           </Container>
         </section>
         <section className='service__gallery'>
-          <ImageGallery />
+          <ImageGallery page={service_name}/>
+          <Link className='service__gallery-link' to={'/gallery'}>Галерея</Link>
         </section>
         <Contacts/>
       </main>
@@ -97,6 +98,7 @@ export const query = graphql`
         intro
         paragraphs
         keywords
+        service_name
         image_alt
         image {
           childImageSharp {
