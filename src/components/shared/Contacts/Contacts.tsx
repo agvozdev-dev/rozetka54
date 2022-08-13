@@ -50,6 +50,18 @@ const Contacts: React.FC<Contacts> = ({extraClass}) => {
               <span className="contacts__street">{address}</span>
             </a>
 
+            <div className="contacts__item">
+              <span className="contacts__label">ИП:</span>
+              <span className="contacts__name">Бортников Адрей Александрович</span>
+            </div>
+            <div className="contacts__item">
+              <span className="contacts__label">ОГРНИП:</span>
+              <span className="contacts__name">322547600094222</span>
+            </div>
+            <div className="contacts__item">
+              <span className="contacts__label">ИНН:</span>
+              <span className="contacts__name">540452005606</span>
+            </div>
             <div className="contacts__social-network">
               <a className="contacts__social-link" target="_blank" href='https://telegram.me/rozetka54'>
                 <svg className="contacts__social-icon" width="41" height="41" viewBox="0 0 41 41" fill="none"
