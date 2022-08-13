@@ -94,9 +94,8 @@ export default () => {
     }
   }
 
-
   let edges = useStaticQuery(query).allFile.edges
-  debugger
+
   return (
     <section className="about-us" id="about-us">
       <Container>

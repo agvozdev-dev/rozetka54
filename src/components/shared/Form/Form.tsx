@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import MaskInput from 'react-maskinput/lib'
 import './styles.scss'
+import Modal from "../modal/Modal";
+import {ModalBody, ModalFooter, ModalHeader} from "../modal/Modal/Modal";
 
 const Form = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState({});
+
   const addError = (input: any) => {
     input.classList.add("_error")
   }
@@ -33,12 +38,13 @@ const Form = () => {
     })
 
     if (response.ok) {
-      alert("Сообщение отправлено")
       form.reset()
       form.classList.remove("_sending")
+      setModalContent({ header: 'Письмо отправлено', text: 'Мы свяжемся с вами в ближайшее время' })
     } else {
       alert("Произошла ошибка")
       form.classList.remove("_sending")
+      setModalContent({ header: 'Письмо не отправлено', text: 'При отправке письма произошла ошибка. Попробуйте позже' })
     }
   }
 
@@ -66,6 +72,21 @@ const Form = () => {
         name="form__message"
       ></textarea>
       <button className="form__btn" type="submit">Отправить</button>
+      <Modal show={showModal} setShowModal={setShowModal}>
+        <ModalHeader>
+          <h2>{modalContent.header}</h2>
+        </ModalHeader>
+        <ModalBody>
+          <p>
+            {modalContent.text}
+          </p>
+        </ModalBody>
+        <ModalFooter>
+          <span className="modal-button" onClick={() => setShowModal(false)}>
+           Закрыть
+          </span>
+        </ModalFooter>
+      </Modal>
     </form>
   )
 }

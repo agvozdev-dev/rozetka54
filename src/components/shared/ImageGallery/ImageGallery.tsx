@@ -27,7 +27,6 @@ function Fancybox(props: any) {
 
 const ImageGallery = ({ page }) => {
   let edges = useStaticQuery(all).allMdx.edges
-  debugger
   if (page) {
     edges = edges.filter((edge: any) => edge.node.frontmatter.for_page === page)
   }
