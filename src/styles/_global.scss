@@ -182,6 +182,7 @@ body {
 
 .image-gallery {
   &__text {
+    @include font('Roboto', 400);
     max-width: 750px;
     margin: 0 auto;
     padding-top: 30px;

@@ -10,13 +10,15 @@ const GalleryPage = () => {
   return (
     <Layout pageTitle="Галерея">
       <section className="image-gallery">
-        <PageTitle text="Галерея" />
-      <Container>
-        <p className="image-gallery__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-        <p className="image-gallery__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-        <ImageGallery />
+        <PageTitle text="Галерея"/>
+        <Container>
+          <p className="image-gallery__text">
+            Предоставляем вашему вниманию наши последние сданные объекты. Мы работаем в новостройках,
+            вторичных квартирах, жилых домах и в больших промышленных помещениях.
+          </p>
+          <ImageGallery/>
         </Container>
-        <Contacts />
+        <Contacts/>
 
       </section>
     </Layout>
