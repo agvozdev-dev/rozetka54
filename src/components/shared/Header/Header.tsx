@@ -125,10 +125,6 @@ export default () => {
     header.style.position = menuCheckbox && menuCheckbox.checked
       ? 'fixed'
       : 'absolute'
-
-    // document.body.style.overflow = menuCheckbox && menuCheckbox.checked
-    //   ? 'hidden'
-    //   : 'visible'
   }
 
   return (
