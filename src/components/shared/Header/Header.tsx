@@ -19,6 +19,10 @@ const menuItems = [
     to: "/services"
   },
   {
+    name: "Галерея",
+    to: "/gallery"
+  },
+  {
     name: "Блог",
     to: "/blog"
   },
