@@ -39,7 +39,7 @@ const SliderItem : React.FC<SliderItemType> = ({ title, description, to }) => (
 )
 
 const autoplay = {
-  delay: 10000,
+  delay: 12000,
   disableOnInteraction: false,
 }
 
