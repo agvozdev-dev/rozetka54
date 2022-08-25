@@ -235,10 +235,4 @@ input[type="checkbox"]:checked ~ .menu__lines .menu__line-3 {
 .logo {
   outline-color: $primary-yellow;
   z-index: 3;
-
-  &__img {
-    width: 51px;
-    height: 60px;
-    object-fit: contain;
-  }
 }

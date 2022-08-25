@@ -62,7 +62,7 @@ const ServicePage = ({data}) => {
                       {point.points.map((checkPoint: any, index: number) => {
                         return (
                           <li className="service__point-item">
-                            <TextPoint text={checkPoint} searchWords={[]}/>
+                            <TextPoint title={''} text={checkPoint} />
                           </li>
                         )
                       })}

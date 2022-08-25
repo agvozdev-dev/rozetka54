@@ -10,8 +10,8 @@ import {Fancybox as NativeFancybox} from "@fancyapps/ui/dist/fancybox.esm";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 type Point = {
+  title: string
   text: string
-  searchWords: string[]
 }
 
 type Card = {
@@ -22,20 +22,20 @@ type Card = {
 
 const points: Point[] = [
   {
-    text: 'Качество - все работы выполняются по ГОСТу',
-    searchWords: ['Качество'],
+    title: 'Качество',
+    text: 'Все работы выполняются по ГОСТу'
   },
   {
-    text: 'Аккуратность - бережное обращение к материалам',
-    searchWords: ['Аккуратность'],
+    title: 'Аккуратность',
+    text: 'Бережное обращение к материалам'
   },
   {
-    text: 'Долговечность - предоставляем гарантии по договору',
-    searchWords: ['Долговечность'],
+    title: 'Долговечность',
+    text: 'Предоставляем гарантии по договору'
   },
   {
-    text: 'Соблюдение сроков - мы ценим ваше время',
-    searchWords: ['Соблюдение', 'сроков'],
+    title: 'Соблюдение сроков',
+    text: 'Мы ценим ваше время'
   },
 ]
 
@@ -113,7 +113,7 @@ export default () => {
         <ul className="about-us__text-point-list">
           {points.map((point, index) => (
             <li className="about-us__text-point-item" key={index}>
-              <TextPoint text={point.text} searchWords={point.searchWords} />
+              <TextPoint title={point.title} text={point.text} />
             </li>
           ))}
         </ul>

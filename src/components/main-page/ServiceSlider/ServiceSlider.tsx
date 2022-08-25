@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './service-slider.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -39,7 +39,7 @@ const SliderItem : React.FC<SliderItemType> = ({ title, description, to }) => (
 )
 
 const autoplay = {
-  delay: 12000,
+  delay: 20000,
   disableOnInteraction: false,
 }
 
@@ -63,6 +63,11 @@ export default () => {
   }).sort(function(a: MainSlider, b: MainSlider) {
     return ((a.order < b.order) ? -1 : ((a.order > a.order) ? 1 : 0));
   })
+
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }, null);
 
   return (
     <Swiper

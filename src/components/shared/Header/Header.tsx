@@ -135,9 +135,10 @@ export default () => {
             <StaticImage
               className="logo__img"
               loading="eager"
-              layout="fixed"
+              width={65}
+              height={80}
               placeholder="blurred"
-              src={'../../../../static/images/logo/logo-51x60.png'}
+              src={'../../../../static/images/logo/logo-subtitle.png'}
               alt="Logo"
             />
           </Link>

@@ -2,25 +2,48 @@
 @import '../../../styles/mixins';
 
 .text-point {
+  display: flex;
+
+  &__title {
+    position: relative;
+    line-height: 30px;
+    margin-right: 10px;
+    @include max-width($sm) {
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    @include font('Roboto', 400);
+    font-size: 15px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    @include max-width($sm) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    margin-right: 15px;
+
+    width: 30px;
+    height: 30px;
+
+    @include max-width($sm) {
+      margin-right: 0;
+    }
+  }
+
   @include max-width($sm) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 }
 
-.text-point__text {
-  position: relative;
-  line-height: 30px;
-}
 
-.text-point__img {
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-
-  @include max-width($sm) {
-    margin-right: 0;
-  }
-}
